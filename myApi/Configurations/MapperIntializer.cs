@@ -6,7 +6,10 @@ namespace Configurations
 {
     class MapperInitializer : Profile
     {
+<<<<<<< HEAD
         // this is spartaaaaaaaa
+=======
+>>>>>>> 6987186885d413653d585ae11996e3980083b9ba
         public MapperInitializer()
         {
             CreateMap<Patient, PatientDTO>().ReverseMap();
