@@ -3,8 +3,12 @@ using Data;
 using Data.Models;
 using Microsoft.OpenApi.Models;
 using Configurations;
+using Data.IRepository;
+using Data.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddAuthorization();
+builder.Services.AddControllers();
 
 // Add services to the container.
 builder.Services.AddCors(options =>
@@ -18,6 +22,8 @@ builder.Services.AddCors(options =>
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddAutoMapper(typeof(MapperInitializer));
+builder.Services.AddDbContext<RISDbContext>();
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(swaggerGenOptions =>
 {
@@ -47,6 +53,16 @@ app.UseHttpsRedirection();
 
 app.UseCors("CORSPolicy");
 
+app.UseRouting();
+app.UseAuthorization();
+app.UseEndpoints(endpoints =>
+{
+    // endpoints.MapControllerRoute(
+    //     name: "default",
+    //     pattern: "{controller=Home}/{action=Index}/{id?}"
+    // );
+    endpoints.MapControllers();
+});
 app.MapGet("/get-all-patients", async () => await PatientsRepository.GetPatientsAsync())
 .WithTags("Patients Endpoints");
 app.MapGet("/get-patient-by-id/{patientId}", async (int patientId) =>
