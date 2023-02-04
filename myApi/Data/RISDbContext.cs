@@ -30,6 +30,8 @@ public partial class RISDbContext : DbContext
                 .HasForeignKey(m => m.PatientId)
                 .OnDelete(DeleteBehavior.Cascade);
         Patient[] patientsToSeed = new Patient[5];
+        RadOrder[] radOrdersToSeed = new RadOrder[10];
+
         for (int i = 1; i <= 5; i++)
         {
             patientsToSeed[i - 1] = new Patient
@@ -38,7 +40,8 @@ public partial class RISDbContext : DbContext
                 Firstname = $"patient{i}",
                 Lastname = $"father{i}",
                 Givenid = $"{i}{i}{i}{i}{i}",
-                Nationalidnumber = "11111111111"
+                Nationalidnumber = "11111111111",
+
 
             };
         }

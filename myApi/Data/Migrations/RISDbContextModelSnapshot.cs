@@ -62,7 +62,7 @@ namespace myApi.Data.Migrations
                             Id = 1,
                             Firstname = "patient1",
                             Givenid = "11111",
-                            Insertdate = new DateTime(2023, 2, 4, 15, 30, 42, 629, DateTimeKind.Local).AddTicks(6332),
+                            Insertdate = new DateTime(2023, 2, 4, 21, 22, 37, 48, DateTimeKind.Local).AddTicks(8540),
                             Lastname = "father1",
                             Nationalidnumber = "11111111111"
                         },
@@ -71,7 +71,7 @@ namespace myApi.Data.Migrations
                             Id = 2,
                             Firstname = "patient2",
                             Givenid = "22222",
-                            Insertdate = new DateTime(2023, 2, 4, 15, 30, 42, 629, DateTimeKind.Local).AddTicks(6523),
+                            Insertdate = new DateTime(2023, 2, 4, 21, 22, 37, 48, DateTimeKind.Local).AddTicks(8652),
                             Lastname = "father2",
                             Nationalidnumber = "11111111111"
                         },
@@ -80,7 +80,7 @@ namespace myApi.Data.Migrations
                             Id = 3,
                             Firstname = "patient3",
                             Givenid = "33333",
-                            Insertdate = new DateTime(2023, 2, 4, 15, 30, 42, 629, DateTimeKind.Local).AddTicks(6562),
+                            Insertdate = new DateTime(2023, 2, 4, 21, 22, 37, 48, DateTimeKind.Local).AddTicks(8666),
                             Lastname = "father3",
                             Nationalidnumber = "11111111111"
                         },
@@ -89,7 +89,7 @@ namespace myApi.Data.Migrations
                             Id = 4,
                             Firstname = "patient4",
                             Givenid = "44444",
-                            Insertdate = new DateTime(2023, 2, 4, 15, 30, 42, 629, DateTimeKind.Local).AddTicks(6599),
+                            Insertdate = new DateTime(2023, 2, 4, 21, 22, 37, 48, DateTimeKind.Local).AddTicks(8679),
                             Lastname = "father4",
                             Nationalidnumber = "11111111111"
                         },
@@ -98,7 +98,7 @@ namespace myApi.Data.Migrations
                             Id = 5,
                             Firstname = "patient5",
                             Givenid = "55555",
-                            Insertdate = new DateTime(2023, 2, 4, 15, 30, 42, 629, DateTimeKind.Local).AddTicks(6637),
+                            Insertdate = new DateTime(2023, 2, 4, 21, 22, 37, 48, DateTimeKind.Local).AddTicks(8691),
                             Lastname = "father5",
                             Nationalidnumber = "11111111111"
                         });

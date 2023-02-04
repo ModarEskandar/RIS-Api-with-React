@@ -35,6 +35,21 @@ namespace Controllers
                 return StatusCode(500, "Internal Server Error. Please Try Again Later");
             }
         }
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetPatientById(int id)
+        {
+            try
+            {
+                var result = await _unitOfWork.patients.GetById(id);
+                var patient = _mapper.Map<PatientDTO>(result);
+                return Ok(patient);
+            }
+            catch (System.Exception)
+            {
+                _logger.LogError($"somthing went wrong in the {nameof(PatientsController)}");
+                return StatusCode(500, "Internal Server Error. Please Try Again Later");
+            }
+        }
 
 
 

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace myApi.Data.Migrations
 {
     [DbContext(typeof(RISDbContext))]
-    [Migration("20230203180834_AddOrderTable")]
-    partial class AddOrderTable
+    [Migration("20230204182237_initMigration")]
+    partial class initMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,9 +36,6 @@ namespace myApi.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("Gendre")
-                        .HasColumnType("int");
-
                     b.Property<string>("Givenid")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -55,8 +52,7 @@ namespace myApi.Data.Migrations
 
                     b.Property<string>("Nationalidnumber")
                         .IsRequired()
-                        .HasMaxLength(11)
-                        .HasColumnType("nvarchar(11)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -67,9 +63,8 @@ namespace myApi.Data.Migrations
                         {
                             Id = 1,
                             Firstname = "patient1",
-                            Gendre = 0,
                             Givenid = "11111",
-                            Insertdate = new DateTime(2023, 2, 3, 21, 8, 31, 934, DateTimeKind.Local).AddTicks(9173),
+                            Insertdate = new DateTime(2023, 2, 4, 21, 22, 37, 48, DateTimeKind.Local).AddTicks(8540),
                             Lastname = "father1",
                             Nationalidnumber = "11111111111"
                         },
@@ -77,9 +72,8 @@ namespace myApi.Data.Migrations
                         {
                             Id = 2,
                             Firstname = "patient2",
-                            Gendre = 0,
                             Givenid = "22222",
-                            Insertdate = new DateTime(2023, 2, 3, 21, 8, 31, 934, DateTimeKind.Local).AddTicks(9342),
+                            Insertdate = new DateTime(2023, 2, 4, 21, 22, 37, 48, DateTimeKind.Local).AddTicks(8652),
                             Lastname = "father2",
                             Nationalidnumber = "11111111111"
                         },
@@ -87,9 +81,8 @@ namespace myApi.Data.Migrations
                         {
                             Id = 3,
                             Firstname = "patient3",
-                            Gendre = 0,
                             Givenid = "33333",
-                            Insertdate = new DateTime(2023, 2, 3, 21, 8, 31, 934, DateTimeKind.Local).AddTicks(9363),
+                            Insertdate = new DateTime(2023, 2, 4, 21, 22, 37, 48, DateTimeKind.Local).AddTicks(8666),
                             Lastname = "father3",
                             Nationalidnumber = "11111111111"
                         },
@@ -97,9 +90,8 @@ namespace myApi.Data.Migrations
                         {
                             Id = 4,
                             Firstname = "patient4",
-                            Gendre = 0,
                             Givenid = "44444",
-                            Insertdate = new DateTime(2023, 2, 3, 21, 8, 31, 934, DateTimeKind.Local).AddTicks(9619),
+                            Insertdate = new DateTime(2023, 2, 4, 21, 22, 37, 48, DateTimeKind.Local).AddTicks(8679),
                             Lastname = "father4",
                             Nationalidnumber = "11111111111"
                         },
@@ -107,9 +99,8 @@ namespace myApi.Data.Migrations
                         {
                             Id = 5,
                             Firstname = "patient5",
-                            Gendre = 0,
                             Givenid = "55555",
-                            Insertdate = new DateTime(2023, 2, 3, 21, 8, 31, 934, DateTimeKind.Local).AddTicks(9667),
+                            Insertdate = new DateTime(2023, 2, 4, 21, 22, 37, 48, DateTimeKind.Local).AddTicks(8691),
                             Lastname = "father5",
                             Nationalidnumber = "11111111111"
                         });
