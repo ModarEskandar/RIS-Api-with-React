@@ -1,7 +1,6 @@
 using AutoMapper;
 using Data.DTOs;
 using Data.IRepository;
-using Data.Models;
 using Microsoft.AspNetCore.Mvc;
 namespace Controllers
 {
@@ -20,6 +19,8 @@ namespace Controllers
             _logger = logger;
             _mapper = mapper;
         }
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [HttpGet]
         public async Task<IActionResult> GetPatients()
         {
@@ -36,6 +37,8 @@ namespace Controllers
             }
         }
         [HttpGet("{id:int}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetPatientById(int id)
         {
             try

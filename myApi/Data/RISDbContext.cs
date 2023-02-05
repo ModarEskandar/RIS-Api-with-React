@@ -1,8 +1,9 @@
 using System.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace Data.Models;
 
-public partial class RISDbContext : DbContext
+public partial class RISDbContext : IdentityDbContext<ApiUser>
 {
     public RISDbContext()
     {
@@ -24,6 +25,7 @@ public partial class RISDbContext : DbContext
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Patient>()
                 .HasMany(p => p.Orders)
                 .WithOne(m => m.patient)

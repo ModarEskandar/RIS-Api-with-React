@@ -5,8 +5,18 @@ using Microsoft.OpenApi.Models;
 using Configurations;
 using Data.IRepository;
 using Data.Repositories;
+using myApi;
+using Serilog;
 
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File(
+    path: Environment.CurrentDirectory.ToString() + "\\Logs\\log-.txt",
+    outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3} {Message:lj} {NewLine} {Exception}]",
+    rollingInterval: RollingInterval.Day,
+    restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information
+    ).CreateLogger();
 var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseSerilog();
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();
 
@@ -32,7 +42,7 @@ builder.Services.AddSwaggerGen(swaggerGenOptions =>
 // builder.Services.AddDbContext<PatientsDbContext>(options=>options.UseOracle(
 //     builder.Configuration.GetConnectionString("DefaultConnection")
 // ));
-
+builder.Services.ConfigureIdentity();
 var app = builder.Build();
 
 app.UseSwagger();
@@ -86,4 +96,16 @@ app.MapDelete("/delete-patient/{patientId}", async (int patientId) =>
     return (patientDeletedSuccessfully) ? Results.Ok("Patient Deleted Successfully") : Results.BadRequest("not");
 }).WithTags("Patients Endpoints");
 
-app.Run();
+try
+{
+    Log.Information("Application Is Starting");
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application Failed to Start");
+}
+finally
+{
+    Log.CloseAndFlush();
+}

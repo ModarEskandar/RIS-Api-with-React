@@ -19,6 +19,8 @@ namespace Controllers
             _logger = logger;
             _mapper = mapper;
         }
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [HttpGet("patientOrders/{patientId}")]
 
         public async Task<IActionResult> GetRadOrdersPatientId(int patientId)
@@ -36,7 +38,10 @@ namespace Controllers
             }
 
         }
+
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
 
         public async Task<IActionResult> GetRadOrders()
         {
