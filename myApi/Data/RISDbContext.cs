@@ -25,6 +25,7 @@ public partial class RISDbContext : IdentityDbContext<ApiUser>
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ApplyConfiguration(new RolesConfiguration());
         base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Patient>()
                 .HasMany(p => p.Orders)
