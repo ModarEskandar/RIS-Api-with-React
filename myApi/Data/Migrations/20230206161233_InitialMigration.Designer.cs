@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace myApi.Data.Migrations
 {
     [DbContext(typeof(RISDbContext))]
-    [Migration("20230204203606_IdentityConfigured")]
-    partial class IdentityConfigured
+    [Migration("20230206161233_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -137,7 +137,7 @@ namespace myApi.Data.Migrations
                             Id = 1,
                             Firstname = "patient1",
                             Givenid = "11111",
-                            Insertdate = new DateTime(2023, 2, 4, 23, 36, 5, 54, DateTimeKind.Local).AddTicks(2007),
+                            Insertdate = new DateTime(2023, 2, 6, 19, 12, 32, 187, DateTimeKind.Local).AddTicks(8157),
                             Lastname = "father1",
                             Nationalidnumber = "11111111111"
                         },
@@ -146,7 +146,7 @@ namespace myApi.Data.Migrations
                             Id = 2,
                             Firstname = "patient2",
                             Givenid = "22222",
-                            Insertdate = new DateTime(2023, 2, 4, 23, 36, 5, 54, DateTimeKind.Local).AddTicks(2355),
+                            Insertdate = new DateTime(2023, 2, 6, 19, 12, 32, 187, DateTimeKind.Local).AddTicks(8330),
                             Lastname = "father2",
                             Nationalidnumber = "11111111111"
                         },
@@ -155,7 +155,7 @@ namespace myApi.Data.Migrations
                             Id = 3,
                             Firstname = "patient3",
                             Givenid = "33333",
-                            Insertdate = new DateTime(2023, 2, 4, 23, 36, 5, 54, DateTimeKind.Local).AddTicks(2367),
+                            Insertdate = new DateTime(2023, 2, 6, 19, 12, 32, 187, DateTimeKind.Local).AddTicks(8350),
                             Lastname = "father3",
                             Nationalidnumber = "11111111111"
                         },
@@ -164,7 +164,7 @@ namespace myApi.Data.Migrations
                             Id = 4,
                             Firstname = "patient4",
                             Givenid = "44444",
-                            Insertdate = new DateTime(2023, 2, 4, 23, 36, 5, 54, DateTimeKind.Local).AddTicks(2405),
+                            Insertdate = new DateTime(2023, 2, 6, 19, 12, 32, 187, DateTimeKind.Local).AddTicks(8368),
                             Lastname = "father4",
                             Nationalidnumber = "11111111111"
                         },
@@ -173,7 +173,7 @@ namespace myApi.Data.Migrations
                             Id = 5,
                             Firstname = "patient5",
                             Givenid = "55555",
-                            Insertdate = new DateTime(2023, 2, 4, 23, 36, 5, 54, DateTimeKind.Local).AddTicks(2427),
+                            Insertdate = new DateTime(2023, 2, 6, 19, 12, 32, 187, DateTimeKind.Local).AddTicks(8385),
                             Lastname = "father5",
                             Nationalidnumber = "11111111111"
                         });
@@ -225,6 +225,22 @@ namespace myApi.Data.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "6bebc506-7f21-48a5-936b-a233dd179b3b",
+                            ConcurrencyStamp = "cc33cedf-ce48-49db-aaf8-ceb8fe2252de",
+                            Name = "administrator",
+                            NormalizedName = "ADMINISTRATOR"
+                        },
+                        new
+                        {
+                            Id = "4de9b7a9-9578-4d8c-8401-80da9149cd30",
+                            ConcurrencyStamp = "9c429331-1a89-40f0-9213-2288e7e90c59",
+                            Name = "user",
+                            NormalizedName = "USER"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

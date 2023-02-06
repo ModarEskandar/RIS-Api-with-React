@@ -1,0 +1,2 @@
+2023-02-06 19:11:00.133 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+ ]

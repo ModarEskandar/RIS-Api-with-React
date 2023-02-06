@@ -46,6 +46,19 @@ namespace Controllers
                         return BadRequest(ModelState);
                     }
                 }
+
+                try
+                {
+                    result = await _userManager.AddToRolesAsync(user, userDTO.Roles);
+
+
+                }
+                catch (System.Exception ex)
+                {
+                    await _userManager.DeleteAsync(user);
+                    _logger.LogError(ex, $"Somthing went Wrong in {nameof(Register)} in Roles ");
+                    return Problem("Intenal Server Error. Please Try Again Later", statusCode: 500);
+                }
                 return Accepted();
                 // return result.Succeeded ? Accepted() : BadRequest("Registeration attempt failed");
             }
