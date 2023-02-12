@@ -1,0 +1,772 @@
+2023-02-06 19:11:36.434 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+ ]2023-02-06 19:11:45.992 +03:00 [INF Executed DbCommand (1,223ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 
+ ]2023-02-06 19:11:47.009 +03:00 [INF Executed DbCommand (400ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [Risndb] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END; 
+ ]2023-02-06 19:11:47.592 +03:00 [INF Executed DbCommand (582ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+DROP DATABASE [Risndb]; 
+ ]2023-02-06 19:12:31.669 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+ ]2023-02-06 19:15:15.191 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None 
+ ]2023-02-06 19:15:19.318 +03:00 [INF Executed DbCommand (2,683ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [Risndb]; 
+ ]2023-02-06 19:15:20.754 +03:00 [INF Executed DbCommand (1,399ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [Risndb] SET READ_COMMITTED_SNAPSHOT ON;
+END; 
+ ]2023-02-06 19:15:20.862 +03:00 [INF Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 
+ ]2023-02-06 19:15:22.307 +03:00 [INF Executed DbCommand (676ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+); 
+ ]2023-02-06 19:15:22.341 +03:00 [INF Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 
+ ]2023-02-06 19:15:22.989 +03:00 [INF Executed DbCommand (633ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+ ]2023-02-06 19:15:23.499 +03:00 [INF Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+ ]2023-02-06 19:15:23.807 +03:00 [INF Applying migration '20230206161233_InitialMigration'. 
+ ]2023-02-06 19:15:24.201 +03:00 [INF Executed DbCommand (117ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+); 
+ ]2023-02-06 19:15:24.249 +03:00 [INF Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [FirstName] nvarchar(max) NOT NULL,
+    [LastName] nvarchar(max) NOT NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+); 
+ ]2023-02-06 19:15:24.282 +03:00 [INF Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [patients] (
+    [Id] int NOT NULL IDENTITY,
+    [Insertdate] datetime2 NOT NULL,
+    [Givenid] nvarchar(max) NOT NULL,
+    [Nationalidnumber] nvarchar(max) NOT NULL,
+    [Firstname] nvarchar(max) NOT NULL,
+    [Middlename] nvarchar(max) NULL,
+    [Lastname] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_patients] PRIMARY KEY ([Id])
+); 
+ ]2023-02-06 19:15:24.287 +03:00 [INF Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+); 
+ ]2023-02-06 19:15:24.291 +03:00 [INF Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+ ]2023-02-06 19:15:24.304 +03:00 [INF Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+ ]2023-02-06 19:15:24.309 +03:00 [INF Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+ ]2023-02-06 19:15:24.312 +03:00 [INF Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+); 
+ ]2023-02-06 19:15:24.534 +03:00 [INF Executed DbCommand (222ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RadOrder] (
+    [Id] int NOT NULL IDENTITY,
+    [Insertdate] datetime2 NOT NULL,
+    [PatientId] int NOT NULL,
+    CONSTRAINT [PK_RadOrder] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RadOrder_patients_PatientId] FOREIGN KEY ([PatientId]) REFERENCES [patients] ([Id]) ON DELETE CASCADE
+); 
+ ]2023-02-06 19:15:24.850 +03:00 [INF Executed DbCommand (315ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'Name', N'NormalizedName') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (N'4de9b7a9-9578-4d8c-8401-80da9149cd30', N'9c429331-1a89-40f0-9213-2288e7e90c59', N'user', N'USER'),
+(N'6bebc506-7f21-48a5-936b-a233dd179b3b', N'cc33cedf-ce48-49db-aaf8-ceb8fe2252de', N'administrator', N'ADMINISTRATOR');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'Name', N'NormalizedName') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] OFF; 
+ ]2023-02-06 19:15:24.875 +03:00 [INF Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Firstname', N'Givenid', N'Insertdate', N'Lastname', N'Middlename', N'Nationalidnumber') AND [object_id] = OBJECT_ID(N'[patients]'))
+    SET IDENTITY_INSERT [patients] ON;
+INSERT INTO [patients] ([Id], [Firstname], [Givenid], [Insertdate], [Lastname], [Middlename], [Nationalidnumber])
+VALUES (1, N'patient1', N'11111', '2023-02-06T19:12:32.1878157+03:00', N'father1', NULL, N'11111111111'),
+(2, N'patient2', N'22222', '2023-02-06T19:12:32.1878330+03:00', N'father2', NULL, N'11111111111'),
+(3, N'patient3', N'33333', '2023-02-06T19:12:32.1878350+03:00', N'father3', NULL, N'11111111111'),
+(4, N'patient4', N'44444', '2023-02-06T19:12:32.1878368+03:00', N'father4', NULL, N'11111111111'),
+(5, N'patient5', N'55555', '2023-02-06T19:12:32.1878385+03:00', N'father5', NULL, N'11111111111');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Firstname', N'Givenid', N'Insertdate', N'Lastname', N'Middlename', N'Nationalidnumber') AND [object_id] = OBJECT_ID(N'[patients]'))
+    SET IDENTITY_INSERT [patients] OFF; 
+ ]2023-02-06 19:15:24.876 +03:00 [INF Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]); 
+ ]2023-02-06 19:15:29.108 +03:00 [INF Executed DbCommand (4,231ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL; 
+ ]2023-02-06 19:15:29.111 +03:00 [INF Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]); 
+ ]2023-02-06 19:15:29.114 +03:00 [INF Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]); 
+ ]2023-02-06 19:15:29.155 +03:00 [INF Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]); 
+ ]2023-02-06 19:15:29.158 +03:00 [INF Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]); 
+ ]2023-02-06 19:15:29.161 +03:00 [INF Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL; 
+ ]2023-02-06 19:15:29.163 +03:00 [INF Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RadOrder_PatientId] ON [RadOrder] ([PatientId]); 
+ ]2023-02-06 19:15:29.168 +03:00 [INF Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230206161233_InitialMigration', N'6.0.7'); 
+ ]2023-02-06 19:30:22.690 +03:00 [WRN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+ ]2023-02-06 19:30:23.529 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-06 19:32:18.461 +03:00 [WRN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+ ]2023-02-06 19:32:19.245 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-06 19:32:23.523 +03:00 [INF Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 
+ ]2023-02-06 19:32:23.602 +03:00 [INF Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+ ]2023-02-06 19:32:23.611 +03:00 [INF Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 
+ ]2023-02-06 19:32:23.613 +03:00 [INF Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+ ]2023-02-06 19:32:23.673 +03:00 [INF Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+ ]2023-02-06 19:32:23.720 +03:00 [INF Applying migration '20230206163025_SeedOrdersData'. 
+ ]2023-02-06 19:32:24.070 +03:00 [INF Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [AspNetRoles]
+WHERE [Id] = N'4de9b7a9-9578-4d8c-8401-80da9149cd30';
+SELECT @@ROWCOUNT; 
+ ]2023-02-06 19:32:24.093 +03:00 [INF Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [AspNetRoles]
+WHERE [Id] = N'6bebc506-7f21-48a5-936b-a233dd179b3b';
+SELECT @@ROWCOUNT; 
+ ]2023-02-06 19:32:24.110 +03:00 [INF Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [patients]
+WHERE [Id] = 1;
+SELECT @@ROWCOUNT; 
+ ]2023-02-06 19:32:24.115 +03:00 [INF Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [patients]
+WHERE [Id] = 2;
+SELECT @@ROWCOUNT; 
+ ]2023-02-06 19:32:24.124 +03:00 [INF Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [patients]
+WHERE [Id] = 3;
+SELECT @@ROWCOUNT; 
+ ]2023-02-06 19:32:24.129 +03:00 [INF Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [patients]
+WHERE [Id] = 4;
+SELECT @@ROWCOUNT; 
+ ]2023-02-06 19:32:24.143 +03:00 [INF Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [patients]
+WHERE [Id] = 5;
+SELECT @@ROWCOUNT; 
+ ]2023-02-06 19:32:24.198 +03:00 [INF Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'Name', N'NormalizedName') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] ON;
+INSERT INTO [AspNetRoles] ([Id], [ConcurrencyStamp], [Name], [NormalizedName])
+VALUES (N'972637b6-57e6-4ae5-afe6-3178dbefeab8', N'd50e7bab-4d40-4af9-95d4-51bbd6456a71', N'administrator', N'ADMINISTRATOR'),
+(N'e3b3b495-ba6c-4ad6-87a9-284b3957c8e2', N'acefe6d3-26a7-4d61-990e-21ba16e32fc7', N'user', N'USER');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'ConcurrencyStamp', N'Name', N'NormalizedName') AND [object_id] = OBJECT_ID(N'[AspNetRoles]'))
+    SET IDENTITY_INSERT [AspNetRoles] OFF; 
+ ]2023-02-06 19:32:24.629 +03:00 [ERR Failed executing DbCommand (428ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Insertdate', N'PatientId') AND [object_id] = OBJECT_ID(N'[RadOrder]'))
+    SET IDENTITY_INSERT [RadOrder] ON;
+INSERT INTO [RadOrder] ([Id], [Insertdate], [PatientId])
+VALUES (1, '2023-02-06T19:30:23.7466904+03:00', 1),
+(2, '2023-02-06T19:30:23.7466929+03:00', 2),
+(3, '2023-02-06T19:30:23.7466931+03:00', 3),
+(4, '2023-02-06T19:30:23.7466933+03:00', 4),
+(5, '2023-02-06T19:30:23.7466935+03:00', 5);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Insertdate', N'PatientId') AND [object_id] = OBJECT_ID(N'[RadOrder]'))
+    SET IDENTITY_INSERT [RadOrder] OFF; 
+ ]2023-02-06 20:42:25.284 +03:00 [INF Application Is Starting 
+ ]2023-02-06 20:42:36.895 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-02-06 20:42:36.904 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-02-06 20:42:36.912 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-02-06 20:42:36.913 +03:00 [INF Hosting environment: Development 
+ ]2023-02-06 20:42:36.913 +03:00 [INF Content root path: E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\ 
+ ]2023-02-06 20:42:40.512 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/index.html - - 
+ ]2023-02-06 20:42:42.404 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/index.html - - - 200 - text/html;charset=utf-8 1904.3969ms 
+ ]2023-02-06 20:42:44.305 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/favicon-16x16.png - - 
+ ]2023-02-06 20:42:44.849 +03:00 [INF Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A' 
+ ]2023-02-06 20:42:44.849 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/favicon-16x16.png - - - 0 665 image/png 544.5523ms 
+ ]2023-02-06 20:42:45.954 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - 
+ ]2023-02-06 20:42:48.198 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 2243.9597ms 
+ ]2023-02-06 20:43:38.154 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 169 
+ ]2023-02-06 20:43:38.173 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-06 20:43:38.175 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-06 20:43:38.505 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:43:38.930 +03:00 [INF Route matched with {action = "Register", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Data.DTOs.UserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-06 20:43:42.010 +03:00 [INF Registeration attempt from user@example.com  
+ ]2023-02-06 20:43:46.236 +03:00 [ERR Somthing went Wrong in Register  
+ System.InvalidOperationException: The property 'ApiUser.Roles' could not be mapped because it is of type 'ICollection<string>', which is not a supported primitive type or a valid entity type. Either explicitly map this property, or ignore it using the '[NotMapped]' attribute or by using 'EntityTypeBuilder.Ignore' in 'OnModelCreating'.
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidatePropertyMapping(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal.SqlServerModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__8_4(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Set[TEntity]()
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.get_UsersSet()
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.get_Users()
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.FindByNameAsync(String normalizedUserName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByNameAsync(String userName)
+   at Microsoft.AspNetCore.Identity.UserValidator`1.ValidateUserName(UserManager`1 manager, TUser user, ICollection`1 errors)
+   at Microsoft.AspNetCore.Identity.UserValidator`1.ValidateAsync(UserManager`1 manager, TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.ValidateUserAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user, String password)
+   at Controllers.AccountsController.Register(UserDTO userDTO) in E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\Controllers\AccountsController.cs:line 40
+]2023-02-06 20:43:47.434 +03:00 [INF Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+ ]2023-02-06 20:43:47.535 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 8575.1419ms 
+ ]2023-02-06 20:43:47.538 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:43:47.719 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 169 - 500 - application/problem+json;+charset=utf-8 9565.2390ms 
+ ]2023-02-06 20:46:40.104 +03:00 [INF Application Is Starting 
+ ]2023-02-06 20:46:41.004 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-02-06 20:46:41.018 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-02-06 20:46:41.029 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-02-06 20:46:41.030 +03:00 [INF Hosting environment: Development 
+ ]2023-02-06 20:46:41.030 +03:00 [INF Content root path: E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\ 
+ ]2023-02-06 20:47:40.136 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/index.html - - 
+ ]2023-02-06 20:47:40.542 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/index.html - - - 200 - text/html;charset=utf-8 415.4517ms 
+ ]2023-02-06 20:47:41.331 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/favicon-16x16.png - - 
+ ]2023-02-06 20:47:41.365 +03:00 [INF Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A' 
+ ]2023-02-06 20:47:41.366 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/favicon-16x16.png - - - 0 665 image/png 34.5308ms 
+ ]2023-02-06 20:47:41.435 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - 
+ ]2023-02-06 20:47:42.026 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 591.2740ms 
+ ]2023-02-06 20:48:03.592 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 169 
+ ]2023-02-06 20:48:03.614 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-06 20:48:03.616 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-06 20:48:03.886 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:48:04.046 +03:00 [INF Route matched with {action = "Register", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Data.DTOs.UserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-06 20:48:05.499 +03:00 [INF Registeration attempt from user@example.com  
+ ]2023-02-06 20:48:08.374 +03:00 [WRN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+ ]2023-02-06 20:48:09.524 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-06 20:48:18.732 +03:00 [INF Executed DbCommand (338ms) [Parameters=[@__normalizedUserName_0='USER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 20:48:18.964 +03:00 [INF Executed DbCommand (30ms) [Parameters=[@__normalizedEmail_0='USER@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 20:48:19.888 +03:00 [INF Executed DbCommand (9ms) [Parameters=[@p0='b1c22830-7d30-49d5-a5ba-c8442b6b8680' (Nullable = false) (Size = 450), @p1='0', @p2='245cd1b3-224e-4ff2-bb96-ff069cc14106' (Size = 4000), @p3='user@example.com' (Size = 256), @p4='False', @p5='string' (Nullable = false) (Size = 4000), @p6='string' (Nullable = false) (Size = 4000), @p7='True', @p8=NULL (DbType = DateTimeOffset), @p9='USER@EXAMPLE.COM' (Size = 256), @p10='USER' (Size = 256), @p11='AQAAAAEAACcQAAAAEB++tuPhC2sTchV6Q39/1DYtNCdRKbJ5J7GK9TEciwwiYiGU5hU12ld1ylhd1RulMw==' (Size = 4000), @p12='string' (Size = 4000), @p13='False', @p14='J5ZTYHE46B2TMVAG54APSEYNM6M74E2F' (Size = 4000), @p15='False', @p16='user' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16); 
+ ]2023-02-06 20:48:20.007 +03:00 [INF Executed DbCommand (26ms) [Parameters=[@__normalizedRoleName_0='USER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 20:48:20.200 +03:00 [INF Executed DbCommand (24ms) [Parameters=[@__p_0='b1c22830-7d30-49d5-a5ba-c8442b6b8680' (Size = 450), @__p_1='4de9b7a9-9578-4d8c-8401-80da9149cd30' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1) 
+ ]2023-02-06 20:48:20.221 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='USER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 20:48:20.324 +03:00 [INF Executed DbCommand (48ms) [Parameters=[@__normalizedUserName_0='USER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 20:48:20.342 +03:00 [INF Executed DbCommand (12ms) [Parameters=[@__normalizedEmail_0='USER@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 20:48:20.419 +03:00 [INF Executed DbCommand (28ms) [Parameters=[@p0='4de9b7a9-9578-4d8c-8401-80da9149cd30' (Nullable = false) (Size = 450), @p1='b1c22830-7d30-49d5-a5ba-c8442b6b8680' (Nullable = false) (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1); 
+ ]2023-02-06 20:48:20.488 +03:00 [INF Executed DbCommand (60ms) [Parameters=[@p16='b1c22830-7d30-49d5-a5ba-c8442b6b8680' (Nullable = false) (Size = 450), @p0='0', @p1='c161bd8f-f7b6-49f0-8990-a1fbfad80e5d' (Size = 4000), @p17='245cd1b3-224e-4ff2-bb96-ff069cc14106' (Size = 4000), @p2='user@example.com' (Size = 256), @p3='False', @p4='string' (Nullable = false) (Size = 4000), @p5='string' (Nullable = false) (Size = 4000), @p6='True', @p7=NULL (DbType = DateTimeOffset), @p8='USER@EXAMPLE.COM' (Size = 256), @p9='USER' (Size = 256), @p10='AQAAAAEAACcQAAAAEB++tuPhC2sTchV6Q39/1DYtNCdRKbJ5J7GK9TEciwwiYiGU5hU12ld1ylhd1RulMw==' (Size = 4000), @p11='string' (Size = 4000), @p12='False', @p13='J5ZTYHE46B2TMVAG54APSEYNM6M74E2F' (Size = 4000), @p14='False', @p15='user' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT; 
+ ]2023-02-06 20:48:20.542 +03:00 [INF Executing AcceptedResult, writing value of type 'null'. 
+ ]2023-02-06 20:48:20.560 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 16496.4522ms 
+ ]2023-02-06 20:48:20.561 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:48:20.590 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 169 - 202 0 - 16997.9576ms 
+ ]2023-02-06 20:54:30.583 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 171 
+ ]2023-02-06 20:54:30.586 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-06 20:54:30.586 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-06 20:54:30.612 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:54:30.613 +03:00 [INF Route matched with {action = "Register", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Data.DTOs.UserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-06 20:54:30.670 +03:00 [INF Registeration attempt from user1@example.com  
+ ]2023-02-06 20:54:31.075 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-06 20:54:31.110 +03:00 [INF Executed DbCommand (16ms) [Parameters=[@__normalizedUserName_0='USER1' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 20:54:31.121 +03:00 [INF Executed DbCommand (9ms) [Parameters=[@__normalizedEmail_0='USER1@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 20:54:31.132 +03:00 [INF Executed DbCommand (7ms) [Parameters=[@p0='a9758aa8-0b20-47c6-bd4c-cf5ed31dceb7' (Nullable = false) (Size = 450), @p1='0', @p2='79b10fd3-a741-48ad-b524-e50ec6457a42' (Size = 4000), @p3='user1@example.com' (Size = 256), @p4='False', @p5='string' (Nullable = false) (Size = 4000), @p6='string' (Nullable = false) (Size = 4000), @p7='True', @p8=NULL (DbType = DateTimeOffset), @p9='USER1@EXAMPLE.COM' (Size = 256), @p10='USER1' (Size = 256), @p11='AQAAAAEAACcQAAAAEP+qJL4uUW4+2y0d3mfMB+3RtIIsKrNmW27Dckveb45NY6J+wP6JPdiHxpo6vgYa2w==' (Size = 4000), @p12='string' (Size = 4000), @p13='False', @p14='HTJSCQQKWUPMTPCBOYAVNEL74BZ5D4YN' (Size = 4000), @p15='False', @p16='user1' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16); 
+ ]2023-02-06 20:54:31.147 +03:00 [INF Executed DbCommand (9ms) [Parameters=[@__normalizedRoleName_0='USER1' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 20:54:31.157 +03:00 [INF Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='USER1' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 20:54:31.161 +03:00 [ERR Somthing went Wrong in Register  
+ System.InvalidOperationException: Role USER1 does not exist.
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.AddToRoleAsync(TUser user, String normalizedRoleName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.AddToRolesAsync(TUser user, IEnumerable`1 roles)
+   at Controllers.AccountsController.Register(UserDTO userDTO) in E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\Controllers\AccountsController.cs:line 49
+]2023-02-06 20:54:31.454 +03:00 [INF Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+ ]2023-02-06 20:54:31.469 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 855.1383ms 
+ ]2023-02-06 20:54:31.469 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:54:31.470 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 171 - 500 - application/problem+json;+charset=utf-8 887.5794ms 
+ ]2023-02-06 20:54:45.983 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 170 
+ ]2023-02-06 20:54:46.017 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-06 20:54:46.017 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-06 20:54:46.018 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:54:46.018 +03:00 [INF Route matched with {action = "Register", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Data.DTOs.UserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-06 20:54:46.068 +03:00 [INF Registeration attempt from user1@example.com  
+ ]2023-02-06 20:54:46.222 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-06 20:54:46.231 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='USER1' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 20:54:46.267 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='USER1@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 20:54:46.273 +03:00 [WRN User validation failed: DuplicateUserName;DuplicateEmail. 
+ ]2023-02-06 20:54:46.276 +03:00 [INF Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'. 
+ ]2023-02-06 20:54:46.290 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 271.4979ms 
+ ]2023-02-06 20:54:46.290 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:54:46.290 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 170 - 400 - application/json;+charset=utf-8 307.8256ms 
+ ]2023-02-06 20:55:09.481 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 171 
+ ]2023-02-06 20:55:09.482 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-06 20:55:09.482 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-06 20:55:09.483 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:55:09.483 +03:00 [INF Route matched with {action = "Register", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Data.DTOs.UserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-06 20:55:09.485 +03:00 [INF Registeration attempt from user2@example.com  
+ ]2023-02-06 20:55:09.567 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-06 20:55:09.605 +03:00 [INF Executed DbCommand (36ms) [Parameters=[@__normalizedUserName_0='USER2' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 20:55:09.623 +03:00 [INF Executed DbCommand (13ms) [Parameters=[@__normalizedEmail_0='USER2@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 20:55:09.693 +03:00 [INF Executed DbCommand (63ms) [Parameters=[@p0='8a8855a8-91ef-4570-b8e7-e4a2901f2317' (Nullable = false) (Size = 450), @p1='0', @p2='8f392a07-28c0-431b-b008-b02c1db6fa5d' (Size = 4000), @p3='user2@example.com' (Size = 256), @p4='False', @p5='string' (Nullable = false) (Size = 4000), @p6='string' (Nullable = false) (Size = 4000), @p7='True', @p8=NULL (DbType = DateTimeOffset), @p9='USER2@EXAMPLE.COM' (Size = 256), @p10='USER2' (Size = 256), @p11='AQAAAAEAACcQAAAAEMmbryqCvEHNIpb4JluHShrG1VFcVJ0PLaUBLD/TKsoujHaU+quazfVv2BBEEy2Ocg==' (Size = 4000), @p12='string' (Size = 4000), @p13='False', @p14='ZETC2BAMPT5UVM43TCN6ODJVOD5ZIW4W' (Size = 4000), @p15='False', @p16='user2' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16); 
+ ]2023-02-06 20:55:09.712 +03:00 [INF Executed DbCommand (11ms) [Parameters=[@__normalizedRoleName_0='USER2' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 20:55:09.716 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='USER2' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 20:55:09.717 +03:00 [ERR Somthing went Wrong in Register  
+ System.InvalidOperationException: Role USER2 does not exist.
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.AddToRoleAsync(TUser user, String normalizedRoleName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.AddToRolesAsync(TUser user, IEnumerable`1 roles)
+   at Controllers.AccountsController.Register(UserDTO userDTO) in E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\Controllers\AccountsController.cs:line 49
+]2023-02-06 20:55:09.721 +03:00 [INF Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+ ]2023-02-06 20:55:09.722 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 238.2677ms 
+ ]2023-02-06 20:55:09.726 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:55:09.727 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 171 - 500 - application/problem+json;+charset=utf-8 245.2214ms 
+ ]2023-02-06 20:55:21.240 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 170 
+ ]2023-02-06 20:55:21.240 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-06 20:55:21.241 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-06 20:55:21.241 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:55:21.245 +03:00 [INF Route matched with {action = "Register", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Data.DTOs.UserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-06 20:55:21.247 +03:00 [INF Registeration attempt from user2@example.com  
+ ]2023-02-06 20:55:21.311 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-06 20:55:21.315 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='USER2' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 20:55:21.318 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='USER2@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 20:55:21.318 +03:00 [WRN User validation failed: DuplicateUserName;DuplicateEmail. 
+ ]2023-02-06 20:55:21.319 +03:00 [INF Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'. 
+ ]2023-02-06 20:55:21.320 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 73.7748ms 
+ ]2023-02-06 20:55:21.320 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:55:21.322 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 170 - 400 - application/json;+charset=utf-8 81.1443ms 
+ ]2023-02-06 20:55:31.371 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 170 
+ ]2023-02-06 20:55:31.371 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-06 20:55:31.371 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-06 20:55:31.373 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:55:31.373 +03:00 [INF Route matched with {action = "Register", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Data.DTOs.UserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-06 20:55:31.376 +03:00 [INF Registeration attempt from user3@example.com  
+ ]2023-02-06 20:55:31.481 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-06 20:55:31.583 +03:00 [INF Executed DbCommand (99ms) [Parameters=[@__normalizedUserName_0='USER3' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 20:55:31.625 +03:00 [INF Executed DbCommand (40ms) [Parameters=[@__normalizedEmail_0='USER3@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 20:55:31.636 +03:00 [INF Executed DbCommand (6ms) [Parameters=[@p0='ffe93bfa-4214-4e19-9554-2651b69096b8' (Nullable = false) (Size = 450), @p1='0', @p2='1b7b5858-3780-4f4a-8a09-b170ee74e7ca' (Size = 4000), @p3='user3@example.com' (Size = 256), @p4='False', @p5='string' (Nullable = false) (Size = 4000), @p6='string' (Nullable = false) (Size = 4000), @p7='True', @p8=NULL (DbType = DateTimeOffset), @p9='USER3@EXAMPLE.COM' (Size = 256), @p10='USER3' (Size = 256), @p11='AQAAAAEAACcQAAAAENY+yS5x1fBNCtWWXwTygfwqDQ+/9jfxjqmU0bSKcnxYhyNGmRJvykLINVTFkp3jwQ==' (Size = 4000), @p12='string' (Size = 4000), @p13='False', @p14='JEWZDCEBWGKTRWOCQI45RHU4CHUSA3PI' (Size = 4000), @p15='False', @p16='user3' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16); 
+ ]2023-02-06 20:55:31.646 +03:00 [INF Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='USER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 20:55:31.670 +03:00 [INF Executed DbCommand (13ms) [Parameters=[@__p_0='ffe93bfa-4214-4e19-9554-2651b69096b8' (Size = 450), @__p_1='4de9b7a9-9578-4d8c-8401-80da9149cd30' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1) 
+ ]2023-02-06 20:55:31.673 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='USER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 20:55:31.677 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='USER3' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 20:55:31.680 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='USER3@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 20:55:31.701 +03:00 [INF Executed DbCommand (10ms) [Parameters=[@p0='4de9b7a9-9578-4d8c-8401-80da9149cd30' (Nullable = false) (Size = 450), @p1='ffe93bfa-4214-4e19-9554-2651b69096b8' (Nullable = false) (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1); 
+ ]2023-02-06 20:55:31.726 +03:00 [INF Executed DbCommand (23ms) [Parameters=[@p16='ffe93bfa-4214-4e19-9554-2651b69096b8' (Nullable = false) (Size = 450), @p0='0', @p1='c17316dc-d2ad-4037-b495-b1d9150b91b3' (Size = 4000), @p17='1b7b5858-3780-4f4a-8a09-b170ee74e7ca' (Size = 4000), @p2='user3@example.com' (Size = 256), @p3='False', @p4='string' (Nullable = false) (Size = 4000), @p5='string' (Nullable = false) (Size = 4000), @p6='True', @p7=NULL (DbType = DateTimeOffset), @p8='USER3@EXAMPLE.COM' (Size = 256), @p9='USER3' (Size = 256), @p10='AQAAAAEAACcQAAAAENY+yS5x1fBNCtWWXwTygfwqDQ+/9jfxjqmU0bSKcnxYhyNGmRJvykLINVTFkp3jwQ==' (Size = 4000), @p11='string' (Size = 4000), @p12='False', @p13='JEWZDCEBWGKTRWOCQI45RHU4CHUSA3PI' (Size = 4000), @p14='False', @p15='user3' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT; 
+ ]2023-02-06 20:55:31.730 +03:00 [INF Executing AcceptedResult, writing value of type 'null'. 
+ ]2023-02-06 20:55:31.730 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 356.4419ms 
+ ]2023-02-06 20:55:31.730 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 20:55:31.733 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 170 - 202 0 - 361.6948ms 
+ ]2023-02-06 21:16:39.247 +03:00 [INF Application Is Starting 
+ ]2023-02-06 21:16:40.301 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-02-06 21:16:40.312 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-02-06 21:16:40.344 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-02-06 21:16:40.345 +03:00 [INF Hosting environment: Development 
+ ]2023-02-06 21:16:40.346 +03:00 [INF Content root path: E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\ 
+ ]2023-02-06 21:19:49.077 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/index.html - - 
+ ]2023-02-06 21:19:49.483 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/index.html - - - 200 - text/html;charset=utf-8 417.3411ms 
+ ]2023-02-06 21:19:50.422 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/favicon-16x16.png - - 
+ ]2023-02-06 21:19:50.464 +03:00 [INF Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A' 
+ ]2023-02-06 21:19:50.465 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/favicon-16x16.png - - - 0 665 image/png 43.0159ms 
+ ]2023-02-06 21:19:50.771 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - 
+ ]2023-02-06 21:19:51.316 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 545.5584ms 
+ ]2023-02-06 21:20:14.231 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 171 
+ ]2023-02-06 21:20:14.259 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-06 21:20:14.260 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-06 21:20:14.560 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 21:20:14.741 +03:00 [INF Route matched with {action = "Register", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Data.DTOs.UserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-06 21:20:16.479 +03:00 [INF Registeration attempt from user15@example.com  
+ ]2023-02-06 21:20:19.329 +03:00 [WRN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+ ]2023-02-06 21:20:20.123 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-06 21:20:22.578 +03:00 [INF Executed DbCommand (161ms) [Parameters=[@__normalizedUserName_0='USER15' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 21:20:22.707 +03:00 [INF Executed DbCommand (11ms) [Parameters=[@__normalizedEmail_0='USER15@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 21:20:23.233 +03:00 [INF Executed DbCommand (26ms) [Parameters=[@p0='fca6e286-39cc-438e-883e-ce1b15d9ef08' (Nullable = false) (Size = 450), @p1='0', @p2='9d6eab0e-061d-45de-8339-e37d4939a807' (Size = 4000), @p3='user15@example.com' (Size = 256), @p4='False', @p5='string' (Nullable = false) (Size = 4000), @p6='string' (Nullable = false) (Size = 4000), @p7='True', @p8=NULL (DbType = DateTimeOffset), @p9='USER15@EXAMPLE.COM' (Size = 256), @p10='USER15' (Size = 256), @p11='AQAAAAEAACcQAAAAENrxYHC9XXm/oPqtFz+vRavYEh51zj7EzHxr7sPLs70XmhCFyYOqoc+s03EG/vGvrg==' (Size = 4000), @p12='string' (Size = 4000), @p13='False', @p14='WGXEKSJIEJMOFGCCVNYQX4IBAPLZQAE7' (Size = 4000), @p15='False', @p16='user15' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16); 
+ ]2023-02-06 21:20:23.308 +03:00 [INF Executed DbCommand (7ms) [Parameters=[@__normalizedRoleName_0='USER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 21:20:23.423 +03:00 [INF Executed DbCommand (3ms) [Parameters=[@__p_0='fca6e286-39cc-438e-883e-ce1b15d9ef08' (Size = 450), @__p_1='4de9b7a9-9578-4d8c-8401-80da9149cd30' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1) 
+ ]2023-02-06 21:20:23.448 +03:00 [INF Executed DbCommand (5ms) [Parameters=[@__normalizedRoleName_0='USER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 21:20:23.483 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='USER15' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 21:20:23.489 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='USER15@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 21:20:23.546 +03:00 [INF Executed DbCommand (7ms) [Parameters=[@p0='4de9b7a9-9578-4d8c-8401-80da9149cd30' (Nullable = false) (Size = 450), @p1='fca6e286-39cc-438e-883e-ce1b15d9ef08' (Nullable = false) (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1); 
+ ]2023-02-06 21:20:23.567 +03:00 [INF Executed DbCommand (12ms) [Parameters=[@p16='fca6e286-39cc-438e-883e-ce1b15d9ef08' (Nullable = false) (Size = 450), @p0='0', @p1='5f91dd37-5df0-413f-8a5f-d452478237b7' (Size = 4000), @p17='9d6eab0e-061d-45de-8339-e37d4939a807' (Size = 4000), @p2='user15@example.com' (Size = 256), @p3='False', @p4='string' (Nullable = false) (Size = 4000), @p5='string' (Nullable = false) (Size = 4000), @p6='True', @p7=NULL (DbType = DateTimeOffset), @p8='USER15@EXAMPLE.COM' (Size = 256), @p9='USER15' (Size = 256), @p10='AQAAAAEAACcQAAAAENrxYHC9XXm/oPqtFz+vRavYEh51zj7EzHxr7sPLs70XmhCFyYOqoc+s03EG/vGvrg==' (Size = 4000), @p11='string' (Size = 4000), @p12='False', @p13='WGXEKSJIEJMOFGCCVNYQX4IBAPLZQAE7' (Size = 4000), @p14='False', @p15='user15' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT; 
+ ]2023-02-06 21:20:23.587 +03:00 [INF Executing AcceptedResult, writing value of type 'null'. 
+ ]2023-02-06 21:20:23.600 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 8842.4061ms 
+ ]2023-02-06 21:20:23.601 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 21:20:23.626 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 171 - 202 0 - 9394.2858ms 
+ ]2023-02-06 21:21:03.240 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 171 
+ ]2023-02-06 21:21:03.243 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-06 21:21:03.243 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-06 21:21:03.268 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 21:21:03.269 +03:00 [INF Route matched with {action = "Register", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Data.DTOs.UserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-06 21:21:03.319 +03:00 [INF Registeration attempt from user6@example.com  
+ ]2023-02-06 21:21:03.785 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-06 21:21:03.794 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='USER6' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 21:21:03.802 +03:00 [INF Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='USER6@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 21:21:03.815 +03:00 [INF Executed DbCommand (3ms) [Parameters=[@p0='3e8ee977-e0ee-4258-b141-8b1ec26fe529' (Nullable = false) (Size = 450), @p1='0', @p2='bf3f5dd0-aaf1-42e9-b7af-5312bd55ba9e' (Size = 4000), @p3='user6@example.com' (Size = 256), @p4='False', @p5='string' (Nullable = false) (Size = 4000), @p6='string' (Nullable = false) (Size = 4000), @p7='True', @p8=NULL (DbType = DateTimeOffset), @p9='USER6@EXAMPLE.COM' (Size = 256), @p10='USER6' (Size = 256), @p11='AQAAAAEAACcQAAAAEKLyY/v8CDbKeS298xcTfvVh+ld9W07tPJ7YcgxUGhgbRjmAKrzXmss+6YwK30urEA==' (Size = 4000), @p12='string' (Size = 4000), @p13='False', @p14='U7XEKLJJ2HW3R4NGYO4WZYCOIORI5C4D' (Size = 4000), @p15='False', @p16='user6' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16); 
+ ]2023-02-06 21:21:03.820 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='USER1' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 21:21:03.823 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='USER1' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 21:21:03.842 +03:00 [ERR Somthing went Wrong in Register  
+ System.InvalidOperationException: Role USER1 does not exist.
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.AddToRoleAsync(TUser user, String normalizedRoleName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.AddToRolesAsync(TUser user, IEnumerable`1 roles)
+   at Controllers.AccountsController.Register(UserDTO userDTO) in E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\Controllers\AccountsController.cs:line 49
+]2023-02-06 21:21:04.262 +03:00 [INF Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+ ]2023-02-06 21:21:04.270 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 1001.2499ms 
+ ]2023-02-06 21:21:04.271 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 21:21:04.278 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 171 - 500 - application/problem+json;+charset=utf-8 1037.9728ms 
+ ]2023-02-06 21:21:18.693 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 170 
+ ]2023-02-06 21:21:18.696 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-06 21:21:18.696 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-06 21:21:18.697 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 21:21:18.698 +03:00 [INF Route matched with {action = "Register", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Data.DTOs.UserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-06 21:21:18.810 +03:00 [INF Registeration attempt from user6@example.com  
+ ]2023-02-06 21:21:19.085 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-06 21:21:19.095 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='USER6' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 21:21:19.103 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='USER6@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 21:21:19.110 +03:00 [WRN User validation failed: DuplicateUserName;DuplicateEmail. 
+ ]2023-02-06 21:21:19.119 +03:00 [INF Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'. 
+ ]2023-02-06 21:21:19.124 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 425.6328ms 
+ ]2023-02-06 21:21:19.124 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 21:21:19.126 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 170 - 400 - application/json;+charset=utf-8 432.7222ms 
+ ]2023-02-06 21:25:40.412 +03:00 [INF Application Is Starting 
+ ]2023-02-06 21:25:40.715 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-02-06 21:25:40.723 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-02-06 21:25:40.730 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-02-06 21:25:40.731 +03:00 [INF Hosting environment: Development 
+ ]2023-02-06 21:25:40.731 +03:00 [INF Content root path: E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\ 
+ ]2023-02-06 21:26:59.019 +03:00 [INF Application Is Starting 
+ ]2023-02-06 21:26:59.493 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-02-06 21:26:59.504 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-02-06 21:26:59.520 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-02-06 21:26:59.520 +03:00 [INF Hosting environment: Development 
+ ]2023-02-06 21:26:59.520 +03:00 [INF Content root path: E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\ 
+ ]2023-02-06 21:28:48.531 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/index.html - - 
+ ]2023-02-06 21:28:48.972 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/index.html - - - 200 - text/html;charset=utf-8 439.0569ms 
+ ]2023-02-06 21:28:50.045 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - 
+ ]2023-02-06 21:28:50.582 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 537.2838ms 
+ ]2023-02-06 21:29:12.169 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 172 
+ ]2023-02-06 21:29:12.194 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-06 21:29:12.195 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-06 21:29:12.470 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 21:29:12.646 +03:00 [INF Route matched with {action = "Register", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Data.DTOs.UserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-06 21:29:14.053 +03:00 [INF Registeration attempt from user7@example.com  
+ ]2023-02-06 21:29:16.711 +03:00 [WRN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+ ]2023-02-06 21:29:17.638 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-06 21:29:19.756 +03:00 [INF Executed DbCommand (157ms) [Parameters=[@__normalizedUserName_0='USER7' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 21:29:19.869 +03:00 [INF Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='USER7@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 21:29:20.450 +03:00 [INF Executed DbCommand (3ms) [Parameters=[@p0='79200134-4963-4f41-a722-5aade5d0cda3' (Nullable = false) (Size = 450), @p1='0', @p2='2cc16aac-d0aa-46a1-be33-1864edcc5211' (Size = 4000), @p3='user7@example.com' (Size = 256), @p4='False', @p5='string' (Nullable = false) (Size = 4000), @p6='string' (Nullable = false) (Size = 4000), @p7='True', @p8=NULL (DbType = DateTimeOffset), @p9='USER7@EXAMPLE.COM' (Size = 256), @p10='USER7' (Size = 256), @p11='AQAAAAEAACcQAAAAEPUVsFVQK7UdZwT17Y6g3mIzssTtUai6G+Ni0gw3WjwJ/6nHJ7JyG8kKG+IOtNn8Nw==' (Size = 4000), @p12='string' (Size = 4000), @p13='False', @p14='UAYQUSK2MRCNBJMZR5AMJYM7PESFA52E' (Size = 4000), @p15='False', @p16='user7' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16); 
+ ]2023-02-06 21:29:20.532 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='USER1' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 21:29:20.553 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='USER1' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 21:29:20.682 +03:00 [INF Executed DbCommand (57ms) [Parameters=[@p0='79200134-4963-4f41-a722-5aade5d0cda3' (Nullable = false) (Size = 450), @p1='2cc16aac-d0aa-46a1-be33-1864edcc5211' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUsers]
+WHERE [Id] = @p0 AND [ConcurrencyStamp] = @p1;
+SELECT @@ROWCOUNT; 
+ ]2023-02-06 21:29:20.727 +03:00 [ERR Somthing went Wrong in Register in Roles  
+ System.InvalidOperationException: Role USER1 does not exist.
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.AddToRoleAsync(TUser user, String normalizedRoleName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.AddToRolesAsync(TUser user, IEnumerable`1 roles)
+   at Controllers.AccountsController.Register(UserDTO userDTO) in E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\Controllers\AccountsController.cs:line 52
+]2023-02-06 21:29:20.843 +03:00 [INF Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+ ]2023-02-06 21:29:20.873 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 8203.6544ms 
+ ]2023-02-06 21:29:20.876 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 21:29:20.909 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 172 - 500 - application/problem+json;+charset=utf-8 8739.7757ms 
+ ]2023-02-06 21:29:52.398 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 171 
+ ]2023-02-06 21:29:52.399 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-06 21:29:52.400 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-06 21:29:52.417 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 21:29:52.418 +03:00 [INF Route matched with {action = "Register", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Data.DTOs.UserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-06 21:29:52.474 +03:00 [INF Registeration attempt from user7@example.com  
+ ]2023-02-06 21:29:52.949 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-06 21:29:52.954 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='USER7' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 21:29:52.962 +03:00 [INF Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='USER7@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 21:29:52.999 +03:00 [INF Executed DbCommand (18ms) [Parameters=[@p0='0ecc786a-bdd2-4a9c-b951-4f25b42f659e' (Nullable = false) (Size = 450), @p1='0', @p2='0729dd47-081f-45da-843e-9a6c46b5560f' (Size = 4000), @p3='user7@example.com' (Size = 256), @p4='False', @p5='string' (Nullable = false) (Size = 4000), @p6='string' (Nullable = false) (Size = 4000), @p7='True', @p8=NULL (DbType = DateTimeOffset), @p9='USER7@EXAMPLE.COM' (Size = 256), @p10='USER7' (Size = 256), @p11='AQAAAAEAACcQAAAAEBbIqV+wOaglb/OmqRGDoXCby8sq6oepwD+WL1oQ5NLB0Ri7UhAEkofNgqgowVbz0A==' (Size = 4000), @p12='string' (Size = 4000), @p13='False', @p14='WK2PV6I2U6Q3QOYKA6TLKPMU6GKVRSJL' (Size = 4000), @p15='False', @p16='user7' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16); 
+ ]2023-02-06 21:29:53.003 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='USER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 21:29:53.249 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__p_0='0ecc786a-bdd2-4a9c-b951-4f25b42f659e' (Size = 450), @__p_1='4de9b7a9-9578-4d8c-8401-80da9149cd30' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1) 
+ ]2023-02-06 21:29:53.253 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='USER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-06 21:29:53.332 +03:00 [INF Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='USER7' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-06 21:29:53.342 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='USER7@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-06 21:29:53.415 +03:00 [INF Executed DbCommand (6ms) [Parameters=[@p0='4de9b7a9-9578-4d8c-8401-80da9149cd30' (Nullable = false) (Size = 450), @p1='0ecc786a-bdd2-4a9c-b951-4f25b42f659e' (Nullable = false) (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1); 
+ ]2023-02-06 21:29:53.436 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@p16='0ecc786a-bdd2-4a9c-b951-4f25b42f659e' (Nullable = false) (Size = 450), @p0='0', @p1='7d647912-3850-496d-81ba-ea37053ce6b8' (Size = 4000), @p17='0729dd47-081f-45da-843e-9a6c46b5560f' (Size = 4000), @p2='user7@example.com' (Size = 256), @p3='False', @p4='string' (Nullable = false) (Size = 4000), @p5='string' (Nullable = false) (Size = 4000), @p6='True', @p7=NULL (DbType = DateTimeOffset), @p8='USER7@EXAMPLE.COM' (Size = 256), @p9='USER7' (Size = 256), @p10='AQAAAAEAACcQAAAAEBbIqV+wOaglb/OmqRGDoXCby8sq6oepwD+WL1oQ5NLB0Ri7UhAEkofNgqgowVbz0A==' (Size = 4000), @p11='string' (Size = 4000), @p12='False', @p13='WK2PV6I2U6Q3QOYKA6TLKPMU6GKVRSJL' (Size = 4000), @p14='False', @p15='user7' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT; 
+ ]2023-02-06 21:29:53.450 +03:00 [INF Executing AcceptedResult, writing value of type 'null'. 
+ ]2023-02-06 21:29:53.451 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 1032.3721ms 
+ ]2023-02-06 21:29:53.451 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-06 21:29:53.453 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 171 - 202 0 - 1054.9669ms 
+ ]

@@ -4,6 +4,7 @@ using Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace myApi.Data.Migrations
 {
     [DbContext(typeof(RISDbContext))]
-    partial class RISDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230206161233_InitialMigration")]
+    partial class InitialMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -128,6 +130,53 @@ namespace myApi.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("patients");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Firstname = "patient1",
+                            Givenid = "11111",
+                            Insertdate = new DateTime(2023, 2, 6, 19, 12, 32, 187, DateTimeKind.Local).AddTicks(8157),
+                            Lastname = "father1",
+                            Nationalidnumber = "11111111111"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Firstname = "patient2",
+                            Givenid = "22222",
+                            Insertdate = new DateTime(2023, 2, 6, 19, 12, 32, 187, DateTimeKind.Local).AddTicks(8330),
+                            Lastname = "father2",
+                            Nationalidnumber = "11111111111"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Firstname = "patient3",
+                            Givenid = "33333",
+                            Insertdate = new DateTime(2023, 2, 6, 19, 12, 32, 187, DateTimeKind.Local).AddTicks(8350),
+                            Lastname = "father3",
+                            Nationalidnumber = "11111111111"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Firstname = "patient4",
+                            Givenid = "44444",
+                            Insertdate = new DateTime(2023, 2, 6, 19, 12, 32, 187, DateTimeKind.Local).AddTicks(8368),
+                            Lastname = "father4",
+                            Nationalidnumber = "11111111111"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Firstname = "patient5",
+                            Givenid = "55555",
+                            Insertdate = new DateTime(2023, 2, 6, 19, 12, 32, 187, DateTimeKind.Local).AddTicks(8385),
+                            Lastname = "father5",
+                            Nationalidnumber = "11111111111"
+                        });
                 });
 
             modelBuilder.Entity("Data.Models.RadOrder", b =>
@@ -149,38 +198,6 @@ namespace myApi.Data.Migrations
                     b.HasIndex("PatientId");
 
                     b.ToTable("RadOrder");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Insertdate = new DateTime(2023, 2, 6, 19, 30, 23, 746, DateTimeKind.Local).AddTicks(6904),
-                            PatientId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Insertdate = new DateTime(2023, 2, 6, 19, 30, 23, 746, DateTimeKind.Local).AddTicks(6929),
-                            PatientId = 2
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Insertdate = new DateTime(2023, 2, 6, 19, 30, 23, 746, DateTimeKind.Local).AddTicks(6931),
-                            PatientId = 3
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Insertdate = new DateTime(2023, 2, 6, 19, 30, 23, 746, DateTimeKind.Local).AddTicks(6933),
-                            PatientId = 4
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Insertdate = new DateTime(2023, 2, 6, 19, 30, 23, 746, DateTimeKind.Local).AddTicks(6935),
-                            PatientId = 5
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -212,15 +229,15 @@ namespace myApi.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "972637b6-57e6-4ae5-afe6-3178dbefeab8",
-                            ConcurrencyStamp = "d50e7bab-4d40-4af9-95d4-51bbd6456a71",
+                            Id = "6bebc506-7f21-48a5-936b-a233dd179b3b",
+                            ConcurrencyStamp = "cc33cedf-ce48-49db-aaf8-ceb8fe2252de",
                             Name = "administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
-                            Id = "e3b3b495-ba6c-4ad6-87a9-284b3957c8e2",
-                            ConcurrencyStamp = "acefe6d3-26a7-4d61-990e-21ba16e32fc7",
+                            Id = "4de9b7a9-9578-4d8c-8401-80da9149cd30",
+                            ConcurrencyStamp = "9c429331-1a89-40f0-9213-2288e7e90c59",
                             Name = "user",
                             NormalizedName = "USER"
                         });

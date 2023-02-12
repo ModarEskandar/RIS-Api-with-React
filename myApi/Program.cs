@@ -3,8 +3,22 @@ using Data;
 using Data.Models;
 using Microsoft.OpenApi.Models;
 using Configurations;
+using Data.IRepository;
+using Data.Repositories;
+using myApi;
+using Serilog;
 
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File(
+    path: Environment.CurrentDirectory.ToString() + "\\Logs\\log-.txt",
+    outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3} {Message:lj} {NewLine} {Exception}]",
+    rollingInterval: RollingInterval.Day,
+    restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information
+    ).CreateLogger();
 var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseSerilog();
+builder.Services.AddAuthorization();
+builder.Services.AddControllers();
 
 // Add services to the container.
 builder.Services.AddCors(options =>
@@ -18,6 +32,8 @@ builder.Services.AddCors(options =>
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddAutoMapper(typeof(MapperInitializer));
+builder.Services.AddDbContext<RISDbContext>();
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(swaggerGenOptions =>
 {
@@ -26,7 +42,7 @@ builder.Services.AddSwaggerGen(swaggerGenOptions =>
 // builder.Services.AddDbContext<PatientsDbContext>(options=>options.UseOracle(
 //     builder.Configuration.GetConnectionString("DefaultConnection")
 // ));
-
+builder.Services.ConfigureIdentity();
 var app = builder.Build();
 
 app.UseSwagger();
@@ -47,6 +63,16 @@ app.UseHttpsRedirection();
 
 app.UseCors("CORSPolicy");
 
+app.UseRouting();
+app.UseAuthorization();
+app.UseEndpoints(endpoints =>
+{
+    // endpoints.MapControllerRoute(
+    //     name: "default",
+    //     pattern: "{controller=Home}/{action=Index}/{id?}"
+    // );
+    endpoints.MapControllers();
+});
 app.MapGet("/get-all-patients", async () => await PatientsRepository.GetPatientsAsync())
 .WithTags("Patients Endpoints");
 app.MapGet("/get-patient-by-id/{patientId}", async (int patientId) =>
@@ -70,4 +96,16 @@ app.MapDelete("/delete-patient/{patientId}", async (int patientId) =>
     return (patientDeletedSuccessfully) ? Results.Ok("Patient Deleted Successfully") : Results.BadRequest("not");
 }).WithTags("Patients Endpoints");
 
-app.Run();
+try
+{
+    Log.Information("Application Is Starting");
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application Failed to Start");
+}
+finally
+{
+    Log.CloseAndFlush();
+}
