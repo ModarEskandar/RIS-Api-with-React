@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QRFKkfh8HFelVZarzSBaFR/VhY0s4TrJDr3/dpM6KJ3OudRxMItwMuuyeR0bM1btxKOvWxIPLkjEDdj6+4897w==",
+  "dgSpecHash": "koci6wxQfmuNEk7ceKxqxfbjNPwDltMJA51G4bg1HcbzuI8aZuyW8uDpVAjTfsjbG02mstrn+s1daQAavIe2IQ==",
   "success": true,
-  "projectFilePath": "E:\\vs code projects\\RIS React With .net API\\RIS Api with React\\myApi\\myApi.csproj",
+  "projectFilePath": "E:\\vs code projects\\RIS Api with React\\myApi\\myApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EME\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
