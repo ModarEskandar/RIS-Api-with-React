@@ -7,6 +7,7 @@ using Data.IRepository;
 using Data.Repositories;
 using myApi;
 using Serilog;
+using Services;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File(
@@ -34,6 +35,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddAutoMapper(typeof(MapperInitializer));
 builder.Services.AddDbContext<RISDbContext>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IAuthManager, AuthManager>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(swaggerGenOptions =>
 {
