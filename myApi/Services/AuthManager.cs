@@ -15,7 +15,7 @@ namespace Services;
 public class AuthManager : IAuthManager
 {
     private readonly ILogger<AuthManager> _logger;
-    private readonly ApiUser _apiUser;
+    private ApiUser _apiUser;
     private readonly UserManager<ApiUser> _userManager;
     private readonly IConfiguration _configuration;
     public AuthManager(UserManager<ApiUser> userManager, IConfiguration configuration, ILogger<AuthManager> logger)
@@ -27,7 +27,7 @@ public class AuthManager : IAuthManager
     }
     public async Task<bool> ValidateUser(LoginUserDTO userDTO)
     {
-        var _apiUser = await _userManager.FindByNameAsync(userDTO.Email);
+        _apiUser = await _userManager.FindByNameAsync(userDTO.Email);
         var passwordResult = await _userManager.CheckPasswordAsync(_apiUser, userDTO.Password);
         _logger.LogInformation($"AuthManager attempt from {userDTO.Email} ");
 

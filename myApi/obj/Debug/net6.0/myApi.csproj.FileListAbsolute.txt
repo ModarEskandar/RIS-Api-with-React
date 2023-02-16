@@ -230,3 +230,4 @@ E:\vs code projects\RIS Api with React\myApi\obj\Debug\net6.0\scopedcss\bundle\m
 E:\vs code projects\RIS Api with React\myApi\obj\Debug\net6.0\myApi.csproj.CopyComplete
 E:\vs code projects\RIS Api with React\myApi\obj\Debug\net6.0\myApi.genruntimeconfig.cache
 E:\vs code projects\RIS Api with React\myApi\obj\Debug\net6.0\ref\myApi.dll
+E:\vs code projects\RIS Api with React\myApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
