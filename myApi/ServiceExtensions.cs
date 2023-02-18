@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Diagnostics;
 using Serilog;
+using Marvin.Cache.Headers;
 
 namespace myApi
 {
@@ -80,6 +81,20 @@ namespace myApi
                 }
                 );
             });
+        }
+        public static void ConfigureHttpCacheHeaders(this IServiceCollection services)
+        {
+            services.AddResponseCaching();
+            services.AddHttpCacheHeaders((expirationModelOptions) =>
+    {
+        expirationModelOptions.MaxAge = 600;
+        expirationModelOptions.CacheLocation = CacheLocation.Private;
+    },
+    (validationModelOptions) =>
+    {
+        validationModelOptions.MustRevalidate = true;
+    });
+
         }
     }
 

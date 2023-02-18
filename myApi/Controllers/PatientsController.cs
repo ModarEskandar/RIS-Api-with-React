@@ -21,9 +21,10 @@ namespace Controllers
             _logger = logger;
             _mapper = mapper;
         }
+
+        [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [HttpGet]
         public async Task<IActionResult> GetPatients([FromQuery] RequestParams requestParams)
         {
 

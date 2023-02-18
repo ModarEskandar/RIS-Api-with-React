@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ExKVcG7ez/DAlEvk6qo/bhwGbXAUNG5GdiRpcHNJ2IE/Aeup2gprcVKjFBGtPzM/hRPPK24hQ0OKkuadyUYNDA==",
+  "dgSpecHash": "FI76qb+HT9Lcywze88c2HQ0gt72se3oMfIrCEsj7ZnMvW6PTwJWilueieK9CamZsBVfJIzaz2wo1CcssmdTUBg==",
   "success": true,
   "projectFilePath": "E:\\vs code projects\\RIS Api with React\\myApi\\myApi.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\EME\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\jetbrains.annotations\\2022.3.1\\jetbrains.annotations.2022.3.1.nupkg.sha512",
+    "C:\\Users\\EME\\.nuget\\packages\\marvin.cache.headers\\6.1.0\\marvin.cache.headers.6.1.0.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0-preview.2.21154.6\\microsoft.aspnetcore.cryptography.internal.6.0.0-preview.2.21154.6.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0-preview.2.21154.6\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0-preview.2.21154.6.nupkg.sha512",

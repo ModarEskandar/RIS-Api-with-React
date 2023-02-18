@@ -218,4 +218,13 @@ WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
  ]2023-02-18 17:43:38.013 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 541.1303ms 
  ]2023-02-18 17:43:38.013 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
  ]2023-02-18 17:43:38.015 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 172 - 400 - application/json;+charset=utf-8 577.9255ms 
+ ]2023-02-18 18:34:50.312 +03:00 [INF Application Is Starting 
+ ]2023-02-18 18:34:50.652 +03:00 [INF User profile is available. Using 'C:\Users\EME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ ]2023-02-18 18:34:51.027 +03:00 [INF Creating key {51532208-d704-439d-a1e1-a15ededc36b7} with creation date 2023-02-18 15:34:51Z, activation date 2023-02-18 15:34:50Z, and expiration date 2023-05-19 15:34:50Z. 
+ ]2023-02-18 18:34:51.080 +03:00 [INF Writing data to file 'C:\Users\EME\AppData\Local\ASP.NET\DataProtection-Keys\key-51532208-d704-439d-a1e1-a15ededc36b7.xml'. 
+ ]2023-02-18 18:34:51.491 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-02-18 18:34:51.491 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-02-18 18:34:51.510 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-02-18 18:34:51.511 +03:00 [INF Hosting environment: Development 
+ ]2023-02-18 18:34:51.511 +03:00 [INF Content root path: E:\vs code projects\RIS Api with React\myApi\ 
  ]

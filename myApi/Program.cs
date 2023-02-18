@@ -8,6 +8,7 @@ using Data.Repositories;
 using myApi;
 using Serilog;
 using Services;
+using Microsoft.AspNetCore.Mvc;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File(
@@ -18,8 +19,18 @@ Log.Logger = new LoggerConfiguration()
     ).CreateLogger();
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog();
+
+builder.Services.ConfigureHttpCacheHeaders();
+builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.CacheProfiles.Add("120SecondsDuration", new CacheProfile
+    {
+        Duration = 120,
+
+    });
+});
 
 // Add services to the container.
 builder.Services.AddCors(options =>
@@ -68,6 +79,9 @@ app.UseHttpsRedirection();
 app.UseCors("CORSPolicy");
 
 app.UseRouting();
+app.UseResponseCaching();
+app.UseHttpCacheHeaders();
+app.UseAuthentication();
 app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
