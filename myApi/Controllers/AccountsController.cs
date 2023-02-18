@@ -42,9 +42,8 @@ namespace Controllers
             {
                 return BadRequest(ModelState);
             }
-            try
-            {
-                var user = _mapper.Map<ApiUser>(userDTO);
+
+            var user = _mapper.Map<ApiUser>(userDTO);
                 user.UserName = user.Email;
                 var result = await _userManager.CreateAsync(user, userDTO.Password);
                 if (!result.Succeeded)
@@ -58,9 +57,7 @@ namespace Controllers
 
                 try
                 {
-                    result = await _userManager.AddToRolesAsync(user, userDTO.Roles);
-
-
+                result = await _userManager.AddToRolesAsync(user, userDTO.Roles);
                 }
                 catch (System.Exception ex)
                 {
@@ -69,15 +66,9 @@ namespace Controllers
                     return Problem("Intenal Server Error. Please Try Again Later", statusCode: 500);
                 }
                 return Accepted();
-                // return result.Succeeded ? Accepted() : BadRequest("Registeration attempt failed");
-            }
-            catch (System.Exception ex)
-            {
+            // return result.Succeeded ? Accepted() : BadRequest("Registeration attempt failed");
 
-                _logger.LogError(ex, $"Somthing went Wrong in {nameof(Register)} ");
-                return Problem("Intenal Server Error. Please Try Again Later", statusCode: 500);
-                // return StatusCode(500, "Intenal Server Error. Please Try Again Later");
-            }
+
         }
         [HttpPost]
         [Route("Login")]
@@ -92,19 +83,11 @@ namespace Controllers
                 _logger.LogError($"failed Login attempt from {userDTO.Email} ");
                 return BadRequest(ModelState);
             }
-            try
-            {
-                var result = await _authManager.ValidateUser(userDTO);
-                return result ? Accepted(new { Token = await _authManager.CreateToken() }) : Unauthorized(userDTO);
-            }
-            catch (System.Exception ex)
-            {
 
-                _logger.LogError(ex, $"Somthing went Wrong in {nameof(Login)} ");
-                return Problem("Intenal Server Error. Please Try Again Later", statusCode: 500);
-                // return Problem(ex.ToString(), statusCode: 500);
-                // return StatusCode(500, "Intenal Server Error. Please Try Again Later");
-            }
+            var result = await _authManager.ValidateUser(userDTO);
+                return result ? Accepted(new { Token = await _authManager.CreateToken() }) : Unauthorized(userDTO);
+
+
         }
 
 

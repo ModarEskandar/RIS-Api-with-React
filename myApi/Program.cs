@@ -54,6 +54,8 @@ app.UseSwaggerUI(SwaggerUIOptions =>
     SwaggerUIOptions.SwaggerEndpoint("/swagger/v1/swagger.json", "Web Api Serving Simple Patient Model");
     SwaggerUIOptions.RoutePrefix = string.Empty;
 });
+app.ConfigureExceptionHandler();
+
 // // Configure the HTTP request pipeline.
 // if (app.Environment.IsDevelopment())
 // {

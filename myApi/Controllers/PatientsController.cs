@@ -26,17 +26,10 @@ namespace Controllers
         [HttpGet]
         public async Task<IActionResult> GetPatients([FromQuery] RequestParams requestParams)
         {
-            try
-            {
-                var results = await _unitOfWork.patients.GetAll(requestParams);
+
+            var results = await _unitOfWork.patients.GetAll(requestParams);
                 var patients = _mapper.Map<ICollection<PatientDTO>>(results);
-                return Ok(patients);
-            }
-            catch (System.Exception)
-            {
-                _logger.LogError($"somthing went wrong in the {nameof(PatientsController)}");
-                return StatusCode(500, "Internal Server Error. Please Try Again Later");
-            }
+            return Ok(patients);
         }
         [Authorize]
         [HttpGet("{id:int}", Name = "GetPatientById")]
@@ -44,17 +37,11 @@ namespace Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetPatientById(int id)
         {
-            try
-            {
-                var result = await _unitOfWork.patients.GetById(id);
+
+            var result = await _unitOfWork.patients.GetById(id);
                 var patient = _mapper.Map<PatientDTO>(result);
                 return Ok(patient);
-            }
-            catch (System.Exception)
-            {
-                _logger.LogError($"somthing went wrong in the {nameof(PatientsController)}");
-                return StatusCode(500, "Internal Server Error. Please Try Again Later");
-            }
+
         }
         [Authorize("Administrator")]
         [HttpPost]
@@ -69,19 +56,13 @@ namespace Controllers
                 _logger.LogError($"failed Create patient attempt from {patientDTO} ");
                 return BadRequest(ModelState);
             }
-            try
-            {
-                var patient = _mapper.Map<Patient>(patientDTO);
+
+            var patient = _mapper.Map<Patient>(patientDTO);
                 await _unitOfWork.patients.Insert(patient);
                 await _unitOfWork.Save();
                 return CreatedAtRoute("GetPatientById", new { id = patient.Id }, patient);
 
-            }
-            catch (System.Exception ex)
-            {
-                _logger.LogError(ex, $"Somthing went Wrong in {nameof(CreatePatient)} ");
-                return Problem("Intenal Server Error. Please Try Again Later", statusCode: 500);
-            }
+
         }
         [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -95,9 +76,8 @@ namespace Controllers
                 _logger.LogError($"failed Update patient attempt from {patientDTO} ");
                 return BadRequest(ModelState);
             }
-            try
-            {
-                var patient = await _unitOfWork.patients.GetById(id);
+
+            var patient = await _unitOfWork.patients.GetById(id);
                 if (patient != null)
                 {
                     _mapper.Map(patientDTO, patient);
@@ -109,12 +89,7 @@ namespace Controllers
                 _logger.LogError($"updated patient is not found {patientDTO} ");
                 return BadRequest("Submitted Data is invalid");
 
-            }
-            catch (System.Exception ex)
-            {
-                _logger.LogError(ex, $"Somthing went Wrong in {nameof(UpdatePatient)} ");
-                return Problem("Intenal Server Error. Please Try Again Later", statusCode: 500);
-            }
+
         }
         [Authorize("user")]
         [HttpDelete("{id:int}")]
@@ -129,9 +104,8 @@ namespace Controllers
                 _logger.LogError($"failed Delete  attempt for patient with id {id}  ");
                 return BadRequest(ModelState);
             }
-            try
-            {
-                var patient = await _unitOfWork.patients.GetById(id);
+
+            var patient = await _unitOfWork.patients.GetById(id);
                 if (patient != null)
                 {
                     await _unitOfWork.patients.Delete(patient.Id);
@@ -142,12 +116,7 @@ namespace Controllers
                 _logger.LogError($"deleted patient with id {id} is not found");
                 return BadRequest("Submitted Data is invalid");
 
-            }
-            catch (System.Exception ex)
-            {
-                _logger.LogError(ex, $"Somthing went Wrong in {nameof(DeletePatient)} ");
-                return Problem("Intenal Server Error. Please Try Again Later", statusCode: 500);
-            }
+
         }
 
 
