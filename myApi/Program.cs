@@ -9,6 +9,7 @@ using myApi;
 using Serilog;
 using Services;
 using Microsoft.AspNetCore.Mvc;
+using AspNetCoreRateLimit;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File(
@@ -19,7 +20,9 @@ Log.Logger = new LoggerConfiguration()
     ).CreateLogger();
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog();
-
+builder.Services.AddMemoryCache();
+builder.Services.ConfigureRateLimiting();
+builder.Services.AddHttpContextAccessor();
 builder.Services.ConfigureHttpCacheHeaders();
 builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
@@ -81,6 +84,7 @@ app.UseCors("CORSPolicy");
 app.UseRouting();
 app.UseResponseCaching();
 app.UseHttpCacheHeaders();
+app.UseIpRateLimiting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseEndpoints(endpoints =>

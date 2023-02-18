@@ -6,6 +6,7 @@ using System.Text;
 using Microsoft.AspNetCore.Diagnostics;
 using Serilog;
 using Marvin.Cache.Headers;
+using AspNetCoreRateLimit;
 
 namespace myApi
 {
@@ -95,6 +96,25 @@ namespace myApi
         validationModelOptions.MustRevalidate = true;
     });
 
+        }
+        public static void ConfigureRateLimiting(this IServiceCollection services)
+        {
+            var rateLimieRules = new List<RateLimitRule>
+            {
+                new RateLimitRule{
+                    Endpoint="*",
+                    Limit=1,
+                    Period="4s"
+                }
+
+            };
+            services.Configure<IpRateLimitOptions>(option =>
+            {
+                option.GeneralRules = rateLimieRules;
+            });
+            services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+            services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
+            services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
         }
     }
 

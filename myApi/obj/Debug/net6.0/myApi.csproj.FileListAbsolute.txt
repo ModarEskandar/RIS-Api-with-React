@@ -239,3 +239,5 @@ E:\vs code projects\RIS Api with React\myApi\bin\Debug\net6.0\Microsoft.AspNetCo
 E:\vs code projects\RIS Api with React\myApi\bin\Debug\net6.0\Newtonsoft.Json.dll
 E:\vs code projects\RIS Api with React\myApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 E:\vs code projects\RIS Api with React\myApi\bin\Debug\net6.0\Marvin.Cache.Headers.dll
+E:\vs code projects\RIS Api with React\myApi\bin\Debug\net6.0\AspNetCoreRateLimit.dll
+E:\vs code projects\RIS Api with React\myApi\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
