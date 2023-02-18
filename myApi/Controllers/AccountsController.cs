@@ -89,6 +89,7 @@ namespace Controllers
             _logger.LogInformation($"Login attempt from {userDTO.Email} ");
             if (!ModelState.IsValid)
             {
+                _logger.LogError($"failed Login attempt from {userDTO.Email} ");
                 return BadRequest(ModelState);
             }
             try
@@ -100,8 +101,8 @@ namespace Controllers
             {
 
                 _logger.LogError(ex, $"Somthing went Wrong in {nameof(Login)} ");
-                // return Problem("Intenal Server Error. Please Try Again Later", statusCode: 500);
-                return Problem(ex.ToString(), statusCode: 500);
+                return Problem("Intenal Server Error. Please Try Again Later", statusCode: 500);
+                // return Problem(ex.ToString(), statusCode: 500);
                 // return StatusCode(500, "Intenal Server Error. Please Try Again Later");
             }
         }
