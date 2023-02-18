@@ -24,11 +24,11 @@ namespace Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [HttpGet]
-        public async Task<IActionResult> GetPatients()
+        public async Task<IActionResult> GetPatients([FromQuery] RequestParams requestParams)
         {
             try
             {
-                var results = await _unitOfWork.patients.GetAll();
+                var results = await _unitOfWork.patients.GetAll(requestParams);
                 var patients = _mapper.Map<ICollection<PatientDTO>>(results);
                 return Ok(patients);
             }

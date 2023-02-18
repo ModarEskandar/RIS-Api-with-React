@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "wpGckSmIwoC8Qpyitw3i92W8f0j6lLLFGv0xL/EWxVy3ceM306ICXUM9ckZnnVnKHJ+bFDgExPXwbRwHen4EXQ==",
+  "dgSpecHash": "hi7uC6gBnB2+VPsv9qYu18uctuFRGpBMa6XRxAfSzJyRTBz5sk3548D7dZuIT1eZHUF4fUSbJVUyJih67nUhxw==",
   "success": true,
   "projectFilePath": "E:\\vs code projects\\RIS Api with React\\myApi\\myApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EME\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\EME\\.nuget\\packages\\jetbrains.annotations\\2022.3.1\\jetbrains.annotations.2022.3.1.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0-preview.2.21154.6\\microsoft.aspnetcore.cryptography.internal.6.0.0-preview.2.21154.6.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0-preview.2.21154.6\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0-preview.2.21154.6.nupkg.sha512",
@@ -82,7 +83,9 @@
     "C:\\Users\\EME\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\system.text.json\\4.6.0\\system.text.json.4.6.0.nupkg.sha512",
-    "C:\\Users\\EME\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+    "C:\\Users\\EME\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\EME\\.nuget\\packages\\x.pagedlist\\8.4.5\\x.pagedlist.8.4.5.nupkg.sha512",
+    "C:\\Users\\EME\\.nuget\\packages\\x.pagedlist.mvc.core\\8.4.5\\x.pagedlist.mvc.core.8.4.5.nupkg.sha512"
   ],
   "logs": []
 }
