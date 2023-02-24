@@ -41,8 +41,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("CORSPolicy", builder =>
     {
         builder.AllowAnyMethod()
-        .AllowAnyHeader()
-        .WithOrigins("http://localhost:3000", "https://appname.azurestaticapps.net");
+        .AllowAnyHeader().AllowAnyOrigin();
+        // .WithOrigins("http://localhost:3000", "https://appname.azurestaticapps.net");
     });
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
