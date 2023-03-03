@@ -12,6 +12,7 @@ namespace Configurations
             CreateMap<Patient, CreatePatientDTO>().ReverseMap();
             CreateMap<RadOrder, RadOrderDTO>().ReverseMap();
             CreateMap<RadOrder, CreatePatientDTO>().ReverseMap();
+
             CreateMap<ApiUser, UserDTO>().ReverseMap();
 
         }

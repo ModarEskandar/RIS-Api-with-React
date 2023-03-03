@@ -1,0 +1,27 @@
+2023-02-13 19:36:21.502 +03:00 [INF Application Is Starting 
+ ]2023-02-13 19:36:22.963 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-02-13 19:36:22.995 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-02-13 19:36:23.008 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-02-13 19:36:23.009 +03:00 [INF Hosting environment: Development 
+ ]2023-02-13 19:36:23.010 +03:00 [INF Content root path: E:\vs code projects\RIS Api with React\myApi\ 
+ ]2023-02-13 19:39:39.791 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/index.html - - 
+ ]2023-02-13 19:39:40.918 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/index.html - - - 200 - text/html;charset=utf-8 1114.0665ms 
+ ]2023-02-13 19:39:41.233 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger-ui.css - - 
+ ]2023-02-13 19:39:41.340 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger-ui-bundle.js - - 
+ ]2023-02-13 19:39:41.340 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger-ui-standalone-preset.js - - 
+ ]2023-02-13 19:39:41.383 +03:00 [INF The file /swagger-ui-bundle.js was not modified 
+ ]2023-02-13 19:39:41.385 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger-ui-bundle.js - - - 304 - application/javascript 44.2017ms 
+ ]2023-02-13 19:39:41.475 +03:00 [INF The file /swagger-ui-standalone-preset.js was not modified 
+ ]2023-02-13 19:39:41.476 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger-ui-standalone-preset.js - - - 304 - application/javascript 135.4153ms 
+ ]2023-02-13 19:39:41.555 +03:00 [INF Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+ ]2023-02-13 19:39:41.556 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger-ui.css - - - 200 143632 text/css 322.3975ms 
+ ]2023-02-13 19:39:42.129 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/favicon-16x16.png - - 
+ ]2023-02-13 19:39:42.130 +03:00 [INF Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A' 
+ ]2023-02-13 19:39:42.131 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/favicon-16x16.png - - - 200 665 image/png 1.7088ms 
+ ]2023-02-13 19:39:42.320 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - 
+ ]2023-02-13 19:39:43.212 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 892.0290ms 
+ ]2023-02-13 19:39:52.140 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/get-all-patients - - 
+ ]2023-02-13 19:39:52.380 +03:00 [INF Executing endpoint 'HTTP: GET /get-all-patients' 
+ ]2023-02-13 19:40:05.857 +03:00 [INF Executed endpoint 'HTTP: GET /get-all-patients' 
+ ]2023-02-13 19:40:05.873 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/get-all-patients - - - 200 - application/json;+charset=utf-8 13732.8807ms 
+ ]

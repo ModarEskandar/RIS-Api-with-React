@@ -1,0 +1,161 @@
+2023-02-17 09:21:21.714 +03:00 [INF Application Is Starting 
+ ]2023-02-17 09:21:23.048 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-02-17 09:21:23.068 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-02-17 09:21:23.080 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-02-17 09:21:23.081 +03:00 [INF Hosting environment: Development 
+ ]2023-02-17 09:21:23.081 +03:00 [INF Content root path: E:\vs code projects\RIS Api with React\myApi\ 
+ ]2023-02-17 09:21:24.199 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/index.html - - 
+ ]2023-02-17 09:21:25.139 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/index.html - - - 200 - text/html;charset=utf-8 893.6304ms 
+ ]2023-02-17 09:21:25.288 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger-ui.css - - 
+ ]2023-02-17 09:21:25.812 +03:00 [INF Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+ ]2023-02-17 09:21:25.813 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger-ui.css - - - 200 143632 text/css 525.1224ms 
+ ]2023-02-17 09:21:26.484 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/favicon-16x16.png - - 
+ ]2023-02-17 09:21:26.487 +03:00 [INF Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A' 
+ ]2023-02-17 09:21:26.487 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/favicon-16x16.png - - - 0 665 image/png 3.5180ms 
+ ]2023-02-17 09:21:26.560 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - 
+ ]2023-02-17 09:21:27.256 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 695.3003ms 
+ ]2023-02-17 09:24:47.793 +03:00 [INF Application Is Starting 
+ ]2023-02-17 09:24:48.191 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-02-17 09:24:48.202 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-02-17 09:24:48.215 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-02-17 09:24:48.216 +03:00 [INF Hosting environment: Development 
+ ]2023-02-17 09:24:48.216 +03:00 [INF Content root path: E:\vs code projects\RIS Api with React\myApi\ 
+ ]2023-02-17 09:25:19.044 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/index.html - - 
+ ]2023-02-17 09:25:19.322 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/index.html - - - 200 - text/html;charset=utf-8 286.8634ms 
+ ]2023-02-17 09:25:20.118 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - 
+ ]2023-02-17 09:25:20.516 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 397.2027ms 
+ ]2023-02-17 09:25:38.865 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/api/Patients application/json 181 
+ ]2023-02-17 09:25:38.890 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-17 09:25:38.892 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-17 09:25:39.224 +03:00 [INF Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user. 
+ ]2023-02-17 09:25:39.282 +03:00 [ERR An unhandled exception has occurred while executing the request. 
+ System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+]2023-02-17 09:25:40.061 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/api/Patients application/json 181 - 500 - text/plain;+charset=utf-8 1195.9673ms 
+ ]2023-02-17 09:26:34.765 +03:00 [INF Application Is Starting 
+ ]2023-02-17 09:26:35.040 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-02-17 09:26:35.046 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-02-17 09:26:35.052 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-02-17 09:26:35.054 +03:00 [INF Hosting environment: Development 
+ ]2023-02-17 09:26:35.054 +03:00 [INF Content root path: E:\vs code projects\RIS Api with React\myApi\ 
+ ]2023-02-17 20:39:48.117 +03:00 [INF Application Is Starting 
+ ]2023-02-17 20:39:49.393 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-02-17 20:39:49.413 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-02-17 20:39:49.425 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-02-17 20:39:49.427 +03:00 [INF Hosting environment: Development 
+ ]2023-02-17 20:39:49.427 +03:00 [INF Content root path: E:\vs code projects\RIS Api with React\myApi\ 
+ ]2023-02-17 20:39:50.137 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/index.html - - 
+ ]2023-02-17 20:39:50.734 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/index.html - - - 200 - text/html;charset=utf-8 592.9680ms 
+ ]2023-02-17 20:39:52.133 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - 
+ ]2023-02-17 20:39:52.937 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 803.8223ms 
+ ]2023-02-17 20:41:00.085 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 179 
+ ]2023-02-17 20:41:00.110 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-17 20:41:00.112 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-17 20:41:00.377 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-17 20:41:00.550 +03:00 [INF Route matched with {action = "Register", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Data.DTOs.UserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-17 20:41:02.459 +03:00 [INF Registeration attempt from admin@example.com  
+ ]2023-02-17 20:41:06.586 +03:00 [WRN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+ ]2023-02-17 20:41:07.455 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-17 20:41:13.179 +03:00 [INF Executed DbCommand (511ms) [Parameters=[@__normalizedUserName_0='ADMIN@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-17 20:41:13.339 +03:00 [INF Executed DbCommand (32ms) [Parameters=[@__normalizedEmail_0='ADMIN@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-17 20:41:13.967 +03:00 [INF Executed DbCommand (29ms) [Parameters=[@p0='dd7ae638-f404-4d5e-8e73-f28278b0ef45' (Nullable = false) (Size = 450), @p1='0', @p2='6e1b5f89-6e1c-422f-af51-3b45f0d5bab4' (Size = 4000), @p3='admin@example.com' (Size = 256), @p4='False', @p5='string' (Nullable = false) (Size = 4000), @p6='string' (Nullable = false) (Size = 4000), @p7='True', @p8=NULL (DbType = DateTimeOffset), @p9='ADMIN@EXAMPLE.COM' (Size = 256), @p10='ADMIN@EXAMPLE.COM' (Size = 256), @p11='AQAAAAEAACcQAAAAEOn8vdnBA4h9XKePWBY0FwMSicyDEhcF0wc+SA8VEtRqGtNR2mF63WgjQmNFVWa3iA==' (Size = 4000), @p12='string' (Size = 4000), @p13='False', @p14='MGMZK4TLEJLN7JPRXWVK7U5XSMMFBJBK' (Size = 4000), @p15='False', @p16='admin@example.com' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16); 
+ ]2023-02-17 20:41:14.096 +03:00 [INF Executed DbCommand (25ms) [Parameters=[@__normalizedRoleName_0='ADMINISTRATOR' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-17 20:41:14.237 +03:00 [INF Executed DbCommand (6ms) [Parameters=[@__p_0='dd7ae638-f404-4d5e-8e73-f28278b0ef45' (Size = 450), @__p_1='6bebc506-7f21-48a5-936b-a233dd179b3b' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1) 
+ ]2023-02-17 20:41:14.254 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='ADMINISTRATOR' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0 
+ ]2023-02-17 20:41:14.298 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='ADMIN@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-17 20:41:14.304 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='ADMIN@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0 
+ ]2023-02-17 20:41:14.366 +03:00 [INF Executed DbCommand (16ms) [Parameters=[@p0='6bebc506-7f21-48a5-936b-a233dd179b3b' (Nullable = false) (Size = 450), @p1='dd7ae638-f404-4d5e-8e73-f28278b0ef45' (Nullable = false) (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1); 
+ ]2023-02-17 20:41:14.407 +03:00 [INF Executed DbCommand (30ms) [Parameters=[@p16='dd7ae638-f404-4d5e-8e73-f28278b0ef45' (Nullable = false) (Size = 450), @p0='0', @p1='c0e81bd9-1ba3-462d-a2a4-5f52ca55c582' (Size = 4000), @p17='6e1b5f89-6e1c-422f-af51-3b45f0d5bab4' (Size = 4000), @p2='admin@example.com' (Size = 256), @p3='False', @p4='string' (Nullable = false) (Size = 4000), @p5='string' (Nullable = false) (Size = 4000), @p6='True', @p7=NULL (DbType = DateTimeOffset), @p8='ADMIN@EXAMPLE.COM' (Size = 256), @p9='ADMIN@EXAMPLE.COM' (Size = 256), @p10='AQAAAAEAACcQAAAAEOn8vdnBA4h9XKePWBY0FwMSicyDEhcF0wc+SA8VEtRqGtNR2mF63WgjQmNFVWa3iA==' (Size = 4000), @p11='string' (Size = 4000), @p12='False', @p13='MGMZK4TLEJLN7JPRXWVK7U5XSMMFBJBK' (Size = 4000), @p14='False', @p15='admin@example.com' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+SELECT @@ROWCOUNT; 
+ ]2023-02-17 20:41:14.440 +03:00 [INF Executing AcceptedResult, writing value of type 'null'. 
+ ]2023-02-17 20:41:14.458 +03:00 [INF Executed action Controllers.AccountsController.Register (myApi) in 13890.9807ms 
+ ]2023-02-17 20:41:14.460 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Register (myApi)' 
+ ]2023-02-17 20:41:14.489 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Register application/json 179 - 202 0 - 14404.4243ms 
+ ]2023-02-17 20:42:00.300 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 65 
+ ]2023-02-17 20:42:00.302 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-17 20:42:00.302 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-17 20:42:00.324 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-02-17 20:42:00.341 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-02-17 20:42:00.399 +03:00 [INF Login attempt from admin@example.com  
+ ]2023-02-17 20:42:00.658 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-17 20:42:00.663 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='ADMIN@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-02-17 20:42:00.744 +03:00 [INF AuthManager attempt from admin@example.com  
+ ]2023-02-17 20:42:03.393 +03:00 [INF Executed DbCommand (42ms) [Parameters=[@__userId_0='dd7ae638-f404-4d5e-8e73-f28278b0ef45' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0 
+ ]2023-02-17 20:42:04.578 +03:00 [INF Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+ ]2023-02-17 20:42:04.593 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 4251.5096ms 
+ ]2023-02-17 20:42:04.593 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-02-17 20:42:04.594 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 65 - 202 - application/json;+charset=utf-8 4293.4916ms 
+ ]2023-02-17 20:42:29.855 +03:00 [INF Request starting HTTP/2 PUT https://localhost:7025/api/Patients?id=1 application/json 170 
+ ]2023-02-17 20:42:29.857 +03:00 [INF CORS policy execution failed. 
+ ]2023-02-17 20:42:29.857 +03:00 [INF Request origin https://localhost:7025 does not have permission to access the resource. 
+ ]2023-02-17 20:42:29.857 +03:00 [INF Executing endpoint 'Controllers.PatientsController.UpdatePatient (myApi)' 
+ ]2023-02-17 20:42:29.874 +03:00 [INF Route matched with {action = "UpdatePatient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdatePatient(Int32, Data.DTOs.CreatePatientDTO) on controller Controllers.PatientsController (myApi). 
+ ]2023-02-17 20:42:29.963 +03:00 [INF Update Patient attempt from Data.DTOs.CreatePatientDTO  
+ ]2023-02-17 20:42:30.034 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-02-17 20:42:30.104 +03:00 [INF Executed DbCommand (22ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Firstname], [p].[Givenid], [p].[Insertdate], [p].[Lastname], [p].[Middlename], [p].[Nationalidnumber]
+FROM [patients] AS [p]
+WHERE [p].[Id] = @__p_0 
+ ]2023-02-17 20:42:30.347 +03:00 [INF Executed DbCommand (53ms) [Parameters=[@p6='1', @p0='aaa' (Nullable = false) (Size = 4000), @p1='string' (Nullable = false) (Size = 4000), @p2='2023-02-17T17:40:06.7190000Z', @p3='aa' (Nullable = false) (Size = 4000), @p4='aa' (Size = 4000), @p5='stringstrin' (Nullable = false) (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [patients] SET [Firstname] = @p0, [Givenid] = @p1, [Insertdate] = @p2, [Lastname] = @p3, [Middlename] = @p4, [Nationalidnumber] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT; 
+ ]2023-02-17 20:42:30.378 +03:00 [INF Executing StatusCodeResult, setting HTTP status code 204 
+ ]2023-02-17 20:42:30.379 +03:00 [INF Executed action Controllers.PatientsController.UpdatePatient (myApi) in 504.4118ms 
+ ]2023-02-17 20:42:30.379 +03:00 [INF Executed endpoint 'Controllers.PatientsController.UpdatePatient (myApi)' 
+ ]2023-02-17 20:42:30.382 +03:00 [INF Request finished HTTP/2 PUT https://localhost:7025/api/Patients?id=1 application/json 170 - 204 - - 527.2330ms 
+ ]2023-02-17 20:42:59.587 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/get-all-patients - - 
+ ]2023-02-17 20:42:59.589 +03:00 [INF Executing endpoint 'HTTP: GET /get-all-patients' 
+ ]2023-02-17 20:43:00.022 +03:00 [INF Executed endpoint 'HTTP: GET /get-all-patients' 
+ ]2023-02-17 20:43:00.022 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/get-all-patients - - - 200 - application/json;+charset=utf-8 435.2915ms 
+ ]2023-02-17 21:32:24.382 +03:00 [INF Application Is Starting 
+ ]2023-02-17 21:32:24.798 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-02-17 21:32:24.804 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-02-17 21:32:24.812 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-02-17 21:32:24.812 +03:00 [INF Hosting environment: Development 
+ ]2023-02-17 21:32:24.812 +03:00 [INF Content root path: E:\vs code projects\RIS Api with React\myApi\ 
+ ]

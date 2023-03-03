@@ -3,6 +3,7 @@ using Data.Entities;
 using Data.IRepository;
 using Data.Models;
 using Microsoft.EntityFrameworkCore;
+using X.PagedList;
 
 namespace Data.Repository
 {
@@ -73,6 +74,18 @@ namespace Data.Repository
             return await queryable.AsNoTracking().ToListAsync();
         }
 
+        public async Task<IPagedList<T>> GetAll(RequestParams requestParams, List<string> includes = null)
+        {
+            IQueryable<T> queryable = _db;
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                {
+                    queryable = queryable.Include(include);
+                }
+            }
+            return await queryable.AsNoTracking().ToPagedListAsync(requestParams.PageNumber, requestParams.PageSize);
+        }
 
         public async Task<T> GetById(int id)
         {

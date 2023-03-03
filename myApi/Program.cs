@@ -7,6 +7,9 @@ using Data.IRepository;
 using Data.Repositories;
 using myApi;
 using Serilog;
+using Services;
+using Microsoft.AspNetCore.Mvc;
+using AspNetCoreRateLimit;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File(
@@ -17,8 +20,20 @@ Log.Logger = new LoggerConfiguration()
     ).CreateLogger();
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog();
+builder.Services.AddMemoryCache();
+builder.Services.ConfigureRateLimiting();
+builder.Services.AddHttpContextAccessor();
+builder.Services.ConfigureHttpCacheHeaders();
+builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.CacheProfiles.Add("120SecondsDuration", new CacheProfile
+    {
+        Duration = 120,
+
+    });
+});
 
 // Add services to the container.
 builder.Services.AddCors(options =>
@@ -26,14 +41,15 @@ builder.Services.AddCors(options =>
     options.AddPolicy("CORSPolicy", builder =>
     {
         builder.AllowAnyMethod()
-        .AllowAnyHeader()
-        .WithOrigins("http://localhost:3000", "https://appname.azurestaticapps.net");
+        .AllowAnyHeader().AllowAnyOrigin();
+        // .WithOrigins("http://localhost:3000", "https://appname.azurestaticapps.net");
     });
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddAutoMapper(typeof(MapperInitializer));
 builder.Services.AddDbContext<RISDbContext>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IAuthManager, AuthManager>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(swaggerGenOptions =>
 {
@@ -52,6 +68,8 @@ app.UseSwaggerUI(SwaggerUIOptions =>
     SwaggerUIOptions.SwaggerEndpoint("/swagger/v1/swagger.json", "Web Api Serving Simple Patient Model");
     SwaggerUIOptions.RoutePrefix = string.Empty;
 });
+app.ConfigureExceptionHandler();
+
 // // Configure the HTTP request pipeline.
 // if (app.Environment.IsDevelopment())
 // {
@@ -64,6 +82,10 @@ app.UseHttpsRedirection();
 app.UseCors("CORSPolicy");
 
 app.UseRouting();
+app.UseResponseCaching();
+app.UseHttpCacheHeaders();
+app.UseIpRateLimiting();
+app.UseAuthentication();
 app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {

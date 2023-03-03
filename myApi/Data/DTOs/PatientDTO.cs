@@ -31,6 +31,11 @@ public class CreatePatientDTO
 
 
 }
+public class UpdatePatientDTO : CreatePatientDTO
+{
+
+}
+
 public class PatientDTO : CreatePatientDTO
 {
     public int Id { get; set; }

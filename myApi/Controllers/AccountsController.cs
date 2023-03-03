@@ -4,6 +4,8 @@ using Data.IRepository;
 using Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Services;
+
 namespace Controllers
 {
     [ApiController]
@@ -14,17 +16,24 @@ namespace Controllers
         private readonly IMapper _mapper;
         private readonly UserManager<ApiUser> _userManager;
         // private readonly SignInManager<ApiUser> _signInManager;
-        public AccountsController(UserManager<ApiUser> userManager, ILogger<AccountsController> logger, IMapper mapper)
+        private readonly IAuthManager _authManager;
+        public AccountsController(
+            UserManager<ApiUser> userManager,
+            ILogger<AccountsController> logger,
+            IMapper mapper,
+            IAuthManager authManager)
         {
             _logger = logger;
             _mapper = mapper;
             _userManager = userManager;
             // _signInManager = signInManager;
+            _authManager = authManager;
         }
         [HttpPost]
         [Route("Register")]
 
         [ProducesResponseType(StatusCodes.Status202Accepted)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Register([FromBody] UserDTO userDTO)
         {
@@ -33,10 +42,9 @@ namespace Controllers
             {
                 return BadRequest(ModelState);
             }
-            try
-            {
-                var user = _mapper.Map<ApiUser>(userDTO);
-                user.UserName = user.Email.Split("@")[0];
+
+            var user = _mapper.Map<ApiUser>(userDTO);
+                user.UserName = user.Email;
                 var result = await _userManager.CreateAsync(user, userDTO.Password);
                 if (!result.Succeeded)
                 {
@@ -49,9 +57,7 @@ namespace Controllers
 
                 try
                 {
-                    result = await _userManager.AddToRolesAsync(user, userDTO.Roles);
-
-
+                result = await _userManager.AddToRolesAsync(user, userDTO.Roles);
                 }
                 catch (System.Exception ex)
                 {
@@ -60,40 +66,29 @@ namespace Controllers
                     return Problem("Intenal Server Error. Please Try Again Later", statusCode: 500);
                 }
                 return Accepted();
-                // return result.Succeeded ? Accepted() : BadRequest("Registeration attempt failed");
-            }
-            catch (System.Exception ex)
-            {
+            // return result.Succeeded ? Accepted() : BadRequest("Registeration attempt failed");
 
-                _logger.LogError(ex, $"Somthing went Wrong in {nameof(Register)} ");
-                return Problem("Intenal Server Error. Please Try Again Later", statusCode: 500);
-                // return StatusCode(500, "Intenal Server Error. Please Try Again Later");
-            }
+
         }
-        // [HttpPost]
-        // [Route("Login")]
-        // [ProducesResponseType(StatusCodes.Status202Accepted)]
-        // [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        // public async Task<IActionResult> Login([FromBody] LoginUserDTO userDTO)
-        // {
-        //     _logger.LogInformation($"Login attempt from {userDTO.Email} ");
-        //     if (!ModelState.IsValid)
-        //     {
-        //         return BadRequest(ModelState);
-        //     }
-        //     try
-        //     {
-        //         var result = await _signInManager.PasswordSignInAsync(userDTO.Email, userDTO.Password, false, false);
-        //         return result.Succeeded ? Accepted() : Unauthorized(userDTO);
-        //     }
-        //     catch (System.Exception ex)
-        //     {
+        [HttpPost]
+        [Route("Login")]
+        [ProducesResponseType(StatusCodes.Status202Accepted)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> Login([FromBody] LoginUserDTO userDTO)
+        {
+            _logger.LogInformation($"Login attempt from {userDTO.Email} ");
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError($"failed Login attempt from {userDTO.Email} ");
+                return BadRequest(ModelState);
+            }
 
-        //         _logger.LogError(ex, $"Somthing went Wrong in {nameof(Login)} ");
-        //         return Problem("Intenal Server Error. Please Try Again Later", statusCode: 500);
-        //         // return StatusCode(500, "Intenal Server Error. Please Try Again Later");
-        //     }
-        // }
+            var result = await _authManager.ValidateUser(userDTO);
+                return result ? Accepted(new { Token = await _authManager.CreateToken() }) : Unauthorized(userDTO);
+
+
+        }
 
 
     }
