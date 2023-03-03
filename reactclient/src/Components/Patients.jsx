@@ -95,11 +95,11 @@ export default function Patients() {
           </thead>
           <tbody>
             {patients.map((patient) => (
-              <tr key={patient.patientId}>
-                <th scope="row">{patient.patientId}</th>
-                <td>{patient.Firstname}</td>
-                <td>{patient.Givenid}</td>
-                <td>{patient.Insertdate}</td>
+              <tr key={patient.id}>
+                <th scope="row">{patient.id}</th>
+                <td>{patient.firstname}</td>
+                <td>{patient.givenid}</td>
+                <td>{patient.insertdate}</td>
                 <td>
                   <button
                     className="btn btn-dark btn-lg mx-3 my-3"

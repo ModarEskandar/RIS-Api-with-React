@@ -1,9 +1,9 @@
 import React from "react";
 import AuthContext from "./Store/auth-context";
-import Patients from "./Components/Patients";
+import Patients from "./Components/patientsList";
 import Navbar from "./Components/navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./Components/login";
+import Login from "./Components/logincopy";
 import useToken from "./useToken";
 const App = () => {
   const { token, setToken } = useToken();
@@ -17,7 +17,7 @@ const App = () => {
       <Navbar></Navbar>
 
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/logincopy" element={<Login />} />
         <Route path="/patients" element={<Patients />} />
       </Routes>
     </React.Fragment>

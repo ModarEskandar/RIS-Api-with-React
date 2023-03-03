@@ -884,4 +884,145 @@ WHERE [a].[UserId] = @__userId_0
  ]2023-03-03 18:26:16.703 +03:00 [INF Generating Vary header. 
  ]2023-03-03 18:26:16.703 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
  ]2023-03-03 18:26:16.704 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 - 202 - application/json;+charset=utf-8 99.5211ms 
+ ]2023-03-03 21:01:44.017 +03:00 [INF Application Is Starting 
+ ]2023-03-03 21:01:44.578 +03:00 [INF User profile is available. Using 'C:\Users\EME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ ]2023-03-03 21:01:45.935 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-03-03 21:01:45.935 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-03-03 21:01:45.945 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-03-03 21:01:45.945 +03:00 [INF Hosting environment: Development 
+ ]2023-03-03 21:01:45.945 +03:00 [INF Content root path: E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\ 
+ ]2023-03-03 21:01:47.900 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/index.html - - 
+ ]2023-03-03 21:01:48.270 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/index.html - - - 200 - text/html;charset=utf-8 377.9568ms 
+ ]2023-03-03 21:01:48.413 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger-ui.css - - 
+ ]2023-03-03 21:01:48.664 +03:00 [INF Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+ ]2023-03-03 21:01:48.669 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger-ui.css - - - 200 143632 text/css 255.3921ms 
+ ]2023-03-03 21:01:48.687 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger-ui-bundle.js - - 
+ ]2023-03-03 21:01:48.691 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger-ui-standalone-preset.js - - 
+ ]2023-03-03 21:01:48.694 +03:00 [INF The file /swagger-ui-standalone-preset.js was not modified 
+ ]2023-03-03 21:01:48.695 +03:00 [INF The file /swagger-ui-bundle.js was not modified 
+ ]2023-03-03 21:01:48.695 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger-ui-standalone-preset.js - - - 304 - application/javascript 4.2105ms 
+ ]2023-03-03 21:01:48.698 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger-ui-bundle.js - - - 304 - application/javascript 10.5299ms 
+ ]2023-03-03 21:01:49.345 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/favicon-16x16.png - - 
+ ]2023-03-03 21:01:49.347 +03:00 [INF Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A' 
+ ]2023-03-03 21:01:49.347 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/favicon-16x16.png - - - 200 665 image/png 1.2964ms 
+ ]2023-03-03 21:01:49.448 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - 
+ ]2023-03-03 21:01:49.869 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 420.3593ms 
+ ]2023-03-03 21:01:54.514 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 21:01:54.543 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 21:01:54.547 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 33.2317ms 
+ ]2023-03-03 21:01:54.670 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 61 
+ ]2023-03-03 21:01:54.671 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 21:01:55.043 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 21:01:55.079 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 21:01:55.079 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 21:01:55.089 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 21:01:55.090 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 21:01:55.090 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 21:01:55.570 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 21:01:55.861 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 21:01:58.302 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 21:02:03.011 +03:00 [WRN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+ ]2023-03-03 21:02:03.921 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 21:02:13.219 +03:00 [INF Executed DbCommand (596ms) [Parameters=[@__normalizedUserName_0='ADMINISTRATOR@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-03-03 21:02:13.910 +03:00 [WRN Invalid password for user. 
+ ]2023-03-03 21:02:13.911 +03:00 [INF AuthManager attempt from administrator@example.com  
+ ]2023-03-03 21:02:13.946 +03:00 [INF Executing UnauthorizedObjectResult, writing value of type 'Data.DTOs.LoginUserDTO'. 
+ ]2023-03-03 21:02:14.004 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 18115.4264ms 
+ ]2023-03-03 21:02:14.006 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 21:02:14.023 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 21:02:14.042 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 18:12:14 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 21:02:14.051 +03:00 [INF Not generating Validation headers as the response status code does not indicate success. 
+ ]2023-03-03 21:02:14.052 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 21:02:14.053 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 21:02:14.121 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 61 - 401 - application/json;+charset=utf-8 19450.6575ms 
+ ]2023-03-03 21:02:43.387 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 21:02:43.408 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 21:02:43.409 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 22.1061ms 
+ ]2023-03-03 21:02:43.443 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 
+ ]2023-03-03 21:02:43.445 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 21:02:43.470 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 21:02:43.470 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 21:02:43.470 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 21:02:43.470 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 21:02:43.470 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 21:02:43.470 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 21:02:43.474 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 21:02:43.476 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 21:02:43.515 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 21:02:43.730 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 21:02:43.776 +03:00 [INF Executed DbCommand (27ms) [Parameters=[@__normalizedUserName_0='ADMINISTRATOR@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-03-03 21:02:43.821 +03:00 [INF AuthManager attempt from administrator@example.com  
+ ]2023-03-03 21:02:45.712 +03:00 [INF Executed DbCommand (27ms) [Parameters=[@__userId_0='966f6866-aec0-41a7-8681-85cbdb299698' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0 
+ ]2023-03-03 21:02:47.099 +03:00 [INF Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+ ]2023-03-03 21:02:47.117 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 3640.4486ms 
+ ]2023-03-03 21:02:47.117 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 21:02:47.117 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 21:02:47.118 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 18:12:47 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 21:02:47.118 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 21:02:47.154 +03:00 [INF Validation headers generated. ETag: Strong, "1A6CEA90334DE681C2C13322B4687F41". Last-Modified: Fri, 03 Mar 2023 18:02:47 GMT 
+ ]2023-03-03 21:02:47.155 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 21:02:47.155 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 21:02:47.156 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 - 202 - application/json;+charset=utf-8 3712.9354ms 
+ ]2023-03-03 21:03:21.097 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/get-all-patients - - 
+ ]2023-03-03 21:03:21.098 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 21:03:21.149 +03:00 [INF No cached response available for this request. 
+ ]2023-03-03 21:03:21.154 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 21:03:21.164 +03:00 [INF Not valid - no If-None-Match or If-Modified-Since headers. 
+ ]2023-03-03 21:03:21.165 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 21:03:21.165 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 21:03:21.165 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 21:03:21.165 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 21:03:21.169 +03:00 [INF Executing endpoint 'HTTP: GET /get-all-patients' 
+ ]2023-03-03 21:03:21.686 +03:00 [INF Executed endpoint 'HTTP: GET /get-all-patients' 
+ ]2023-03-03 21:03:21.686 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 21:03:21.687 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 18:13:21 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 21:03:21.687 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 21:03:21.688 +03:00 [INF Validation headers generated. ETag: Strong, "0638EA6A250698CA9A0EB8911E552C1D". Last-Modified: Fri, 03 Mar 2023 18:03:21 GMT 
+ ]2023-03-03 21:03:21.688 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 21:03:21.688 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 21:03:21.705 +03:00 [INF The response could not be cached for this request. 
+ ]2023-03-03 21:03:21.706 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/get-all-patients - - - 200 - application/json;+charset=utf-8 608.9323ms 
+ ]2023-03-03 21:45:53.585 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/api/Patients - - 
+ ]2023-03-03 21:45:53.593 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 21:45:53.603 +03:00 [INF No cached response available for this request. 
+ ]2023-03-03 21:45:53.607 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 21:45:53.609 +03:00 [INF Not valid - no If-None-Match or If-Modified-Since headers. 
+ ]2023-03-03 21:45:53.610 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 21:45:53.610 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 21:45:53.610 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 21:45:53.610 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 21:45:53.664 +03:00 [INF Executing endpoint 'Controllers.PatientsController.GetPatients (myApi)' 
+ ]2023-03-03 21:45:53.794 +03:00 [INF Route matched with {action = "GetPatients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPatients(Data.Models.RequestParams) on controller Controllers.PatientsController (myApi). 
+ ]2023-03-03 21:45:53.947 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 21:45:54.425 +03:00 [INF Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Firstname], [p].[Givenid], [p].[Insertdate], [p].[Lastname], [p].[Middlename], [p].[Nationalidnumber]
+FROM [patients] AS [p] 
+ ]2023-03-03 21:45:54.499 +03:00 [WRN The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased. 
+ ]2023-03-03 21:45:54.500 +03:00 [WRN The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased. 
+ ]2023-03-03 21:45:54.602 +03:00 [INF Executed DbCommand (89ms) [Parameters=[@__p_0='0', @__p_1='10'], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Firstname], [p].[Givenid], [p].[Insertdate], [p].[Lastname], [p].[Middlename], [p].[Nationalidnumber]
+FROM [patients] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+ ]2023-03-03 21:45:54.703 +03:00 [INF Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Data.DTOs.PatientDTO, myApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+ ]2023-03-03 21:45:54.711 +03:00 [INF Executed action Controllers.PatientsController.GetPatients (myApi) in 916.0061ms 
+ ]2023-03-03 21:45:54.711 +03:00 [INF Executed endpoint 'Controllers.PatientsController.GetPatients (myApi)' 
+ ]2023-03-03 21:45:54.711 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 21:45:54.711 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 18:55:54 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 21:45:54.711 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 21:45:54.712 +03:00 [INF Validation headers generated. ETag: Strong, "96A3ACFD0AFEEFDBE13F7F08334771A4". Last-Modified: Fri, 03 Mar 2023 18:45:54 GMT 
+ ]2023-03-03 21:45:54.712 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 21:45:54.712 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 21:45:54.712 +03:00 [INF The response could not be cached for this request. 
+ ]2023-03-03 21:45:54.713 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/api/Patients - - - 200 - application/json;+charset=utf-8 1130.2679ms 
  ]
