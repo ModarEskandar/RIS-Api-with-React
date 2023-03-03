@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FEeqhCgEhPlTp0lrb9BfwX0KMbEaY8L7pbwHpWHww4lezLidVwDQOOGs0TS5Rp2bXPIX47fRlYF9nSXTaA2ILg==",
+  "dgSpecHash": "p/RSLuH9mM5YrHoYgSsNHmk9YL9Paxm17Vxg//pebfnPBLdLDhqUZ3WX+5BSn+LnfA7Pky4tmTmlJSDLZ3Z42g==",
   "success": true,
-  "projectFilePath": "E:\\vs code projects\\RIS Api with React\\myApi\\myApi.csproj",
+  "projectFilePath": "E:\\vs code projects\\RIS React With .net API\\RIS Api with React\\myApi\\myApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EME\\.nuget\\packages\\aspnetcoreratelimit\\5.0.0\\aspnetcoreratelimit.5.0.0.nupkg.sha512",
     "C:\\Users\\EME\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",

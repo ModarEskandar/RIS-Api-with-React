@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useToken from "../useToken";
-import Login from "./Login";
+import Login from "./login";
 
 const Dashboard = () => {
   const { token, setToken } = useToken();
@@ -9,7 +9,7 @@ const Dashboard = () => {
       return <Login setToken={setToken} />;
     }
   }
-  return <div className="text-white font-bold text-2xl">Dashboard</div>;
+  return <div className=" font-bold text-2xl">Dashboard</div>;
 };
 
 export default Dashboard;

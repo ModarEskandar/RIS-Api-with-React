@@ -1,25 +1,39 @@
-import React from "react";
+import React, { Component, useState } from "react";
 import Joi from "joi-browser";
-import { useState } from "react";
 import Form, {
   renderInput,
   renderButton,
   validateProp,
   validate,
 } from "./common/form";
+// import PropTypes from "prop-types";
 
-const Login = (props) => {
+async function LoginUser(credentials) {
+  console.log(JSON.stringify(credentials));
+  return fetch("https://localhost:7025/Api/Accounts/Login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(credentials),
+  })
+    .then((data) => data.json())
+    .catch((error) => {
+      console.log(error);
+      alert(error);
+    });
+}
+const Login = ({ setToken }) => {
   const [data, setData] = useState({
-    username: "",
+    email: "",
     password: "",
   });
   const [errors, setErrors] = useState({});
   const schema = {
-    username: Joi.string().required(),
+    email: Joi.string().email().required(),
     password: Joi.string().required(),
   };
   const handleChange = ({ currentTarget: input }) => {
-    console.log(schema);
     const inputData = { ...data };
     inputData[input.name] = input.value;
     setData(inputData);
@@ -28,17 +42,21 @@ const Login = (props) => {
   const doSubmit = () => {
     console.log("signed in");
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setErrors({ errors: validate(data, schema) || {} });
-    if (errors) return;
-    doSubmit();
+
+    if (errors) console.log(errors);
+    const token = await LoginUser(data);
+    console.log(token);
+
+    setToken(token);
   };
   return (
     <main className="form-signin w-50 m-auto">
       <form onSubmit={handleSubmit}>
         <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
-        {renderInput(data, errors, handleChange, "username", "Username")}
+        {renderInput(data, errors, handleChange, "email", "Username")}
         {renderInput(
           data,
           errors,
@@ -59,5 +77,7 @@ const Login = (props) => {
     </main>
   );
 };
-
+// Login.propTypes = {
+//   setToken: PropTypes.func.isRequired,
+// };
 export default Login;

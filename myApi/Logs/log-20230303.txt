@@ -1,0 +1,887 @@
+2023-03-03 16:59:21.555 +03:00 [INF Application Is Starting 
+ ]2023-03-03 16:59:22.325 +03:00 [INF User profile is available. Using 'C:\Users\EME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ ]2023-03-03 16:59:23.939 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-03-03 16:59:23.939 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-03-03 16:59:23.953 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-03-03 16:59:23.953 +03:00 [INF Hosting environment: Development 
+ ]2023-03-03 16:59:23.953 +03:00 [INF Content root path: E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\ 
+ ]2023-03-03 17:00:47.022 +03:00 [INF Application Is Starting 
+ ]2023-03-03 17:00:47.125 +03:00 [INF User profile is available. Using 'C:\Users\EME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ ]2023-03-03 17:00:47.314 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-03-03 17:00:47.314 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-03-03 17:00:47.320 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-03-03 17:00:47.320 +03:00 [INF Hosting environment: Development 
+ ]2023-03-03 17:00:47.320 +03:00 [INF Content root path: E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\ 
+ ]2023-03-03 17:04:49.221 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/index.html - - 
+ ]2023-03-03 17:04:49.811 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/index.html - - - 200 - text/html;charset=utf-8 602.1683ms 
+ ]2023-03-03 17:04:50.090 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger-ui.css - - 
+ ]2023-03-03 17:04:50.256 +03:00 [INF Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+ ]2023-03-03 17:04:50.257 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger-ui.css - - - 0 143632 text/css 167.3956ms 
+ ]2023-03-03 17:04:51.025 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/favicon-16x16.png - - 
+ ]2023-03-03 17:04:51.033 +03:00 [INF Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A' 
+ ]2023-03-03 17:04:51.033 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/favicon-16x16.png - - - 200 665 image/png 8.5734ms 
+ ]2023-03-03 17:04:51.276 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - 
+ ]2023-03-03 17:04:51.927 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 650.7852ms 
+ ]2023-03-03 17:05:20.048 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 73 
+ ]2023-03-03 17:05:20.065 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 17:05:20.286 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 17:05:20.316 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 17:05:20.317 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 17:05:20.323 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 17:05:20.323 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 17:05:20.323 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 17:05:20.592 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 17:05:20.712 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 17:05:22.614 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 17:05:26.395 +03:00 [WRN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+ ]2023-03-03 17:05:27.193 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 17:55:16.438 +03:00 [INF Application Is Starting 
+ ]2023-03-03 17:55:16.756 +03:00 [INF User profile is available. Using 'C:\Users\EME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+ ]2023-03-03 17:55:17.652 +03:00 [INF Now listening on: https://localhost:7025 
+ ]2023-03-03 17:55:17.652 +03:00 [INF Now listening on: http://localhost:5168 
+ ]2023-03-03 17:55:17.659 +03:00 [INF Application started. Press Ctrl+C to shut down. 
+ ]2023-03-03 17:55:17.660 +03:00 [INF Hosting environment: Development 
+ ]2023-03-03 17:55:17.660 +03:00 [INF Content root path: E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\ 
+ ]2023-03-03 17:55:55.164 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/index.html - - 
+ ]2023-03-03 17:55:55.581 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/index.html - - - 200 - text/html;charset=utf-8 426.0992ms 
+ ]2023-03-03 17:55:56.490 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/favicon-16x16.png - - 
+ ]2023-03-03 17:55:56.518 +03:00 [INF Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A' 
+ ]2023-03-03 17:55:56.519 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/favicon-16x16.png - - - 0 665 image/png 29.1500ms 
+ ]2023-03-03 17:55:56.607 +03:00 [INF Request starting HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - 
+ ]2023-03-03 17:55:57.126 +03:00 [INF Request finished HTTP/2 GET https://localhost:7025/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 519.0987ms 
+ ]2023-03-03 17:59:10.276 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login text/plain;charset=UTF-8 73 
+ ]2023-03-03 17:59:10.302 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 17:59:10.583 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 17:59:10.583 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 17:59:10.583 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 17:59:10.589 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 17:59:10.589 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 17:59:10.589 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 17:59:11.036 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 17:59:11.222 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 17:59:13.134 +03:00 [INF Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'. 
+ ]2023-03-03 17:59:13.184 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 1939.3672ms 
+ ]2023-03-03 17:59:13.187 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 17:59:13.195 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 17:59:13.211 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:09:13 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 17:59:13.218 +03:00 [INF Not generating Validation headers as the response status code does not indicate success. 
+ ]2023-03-03 17:59:13.218 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 17:59:13.219 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 17:59:13.263 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login text/plain;charset=UTF-8 73 - 415 - application/problem+json;+charset=utf-8 2986.8661ms 
+ ]2023-03-03 18:00:08.598 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 18:00:08.600 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:00:08.602 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 4.0830ms 
+ ]2023-03-03 18:00:08.847 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 73 
+ ]2023-03-03 18:00:08.860 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:00:08.884 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:00:08.884 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:00:08.884 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:00:08.884 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:00:08.885 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:00:08.885 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:00:08.890 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:00:08.891 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:00:09.015 +03:00 [INF Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ ]2023-03-03 18:00:09.040 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 148.5886ms 
+ ]2023-03-03 18:00:09.040 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:00:09.040 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:00:09.041 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:10:09 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:00:09.041 +03:00 [INF Not generating Validation headers as the response status code does not indicate success. 
+ ]2023-03-03 18:00:09.041 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:00:09.041 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:00:09.042 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 73 - 400 - application/problem+json;+charset=utf-8 195.5449ms 
+ ]2023-03-03 18:00:42.357 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 61 
+ ]2023-03-03 18:00:42.357 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:00:42.360 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:00:42.361 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:00:42.361 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:00:42.361 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:00:42.361 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:00:42.361 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:00:42.364 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:00:42.364 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:00:42.454 +03:00 [INF Login attempt from user@example.com  
+ ]2023-03-03 18:00:46.541 +03:00 [WRN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development. 
+ ]2023-03-03 18:00:47.839 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:01:10.007 +03:00 [ERR An error occurred using the connection to database 'Risndb' on server 'DESKTOP-US9O7T8\MSSQL14'. 
+ ]2023-03-03 18:01:10.671 +03:00 [ERR An exception occurred while iterating over the results of a query for context type 'Data.Models.RISDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20 
+ Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+]2023-03-03 18:01:10.821 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 28456.2345ms 
+ ]2023-03-03 18:01:10.835 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:01:10.859 +03:00 [ERR An unhandled exception has occurred while executing the request. 
+ Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByNameAsync(String userName)
+   at Services.AuthManager.ValidateUser(LoginUserDTO userDTO) in E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\Services\AuthManager.cs:line 30
+   at Controllers.AccountsController.Login(LoginUserDTO userDTO) in E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\Controllers\AccountsController.cs:line 87
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context) in C:\Users\User\Documents\Github\AspNetCoreRateLimit\src\AspNetCoreRateLimit\Middleware\RateLimitMiddleware.cs:line 124
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+]2023-03-03 18:01:11.638 +03:00 [ERR Somthing went Wrong in Microsoft.AspNetCore.Diagnostics.ExceptionHandlerFeature  
+ ]2023-03-03 18:01:12.643 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 61 - 500 - application/json 30286.5446ms 
+ ]2023-03-03 18:01:29.410 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 
+ ]2023-03-03 18:01:29.411 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:01:29.412 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:01:29.412 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:01:29.412 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:01:29.412 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:01:29.412 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:01:29.412 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:01:29.413 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:01:29.413 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:01:29.416 +03:00 [INF Login attempt from user@example.com  
+ ]2023-03-03 18:01:29.712 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:01:44.334 +03:00 [ERR An error occurred using the connection to database 'Risndb' on server 'DESKTOP-US9O7T8\MSSQL14'. 
+ ]2023-03-03 18:01:44.345 +03:00 [ERR An exception occurred while iterating over the results of a query for context type 'Data.Models.RISDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20 
+ Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+]2023-03-03 18:01:44.357 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 14943.3053ms 
+ ]2023-03-03 18:01:44.358 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:01:44.362 +03:00 [ERR An unhandled exception has occurred while executing the request. 
+ Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByNameAsync(String userName)
+   at Services.AuthManager.ValidateUser(LoginUserDTO userDTO) in E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\Services\AuthManager.cs:line 30
+   at Controllers.AccountsController.Login(LoginUserDTO userDTO) in E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\Controllers\AccountsController.cs:line 87
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context) in C:\Users\User\Documents\Github\AspNetCoreRateLimit\src\AspNetCoreRateLimit\Middleware\RateLimitMiddleware.cs:line 124
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+]2023-03-03 18:01:44.388 +03:00 [ERR Somthing went Wrong in Microsoft.AspNetCore.Diagnostics.ExceptionHandlerFeature  
+ ]2023-03-03 18:01:44.390 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 - 500 - application/json 14979.7358ms 
+ ]2023-03-03 18:02:01.579 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 73 
+ ]2023-03-03 18:02:01.579 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:02:01.580 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:02:01.580 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:02:01.580 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:02:01.580 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:02:01.580 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:02:01.580 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:02:01.581 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:02:01.582 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:02:01.584 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 18:02:01.663 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:02:16.290 +03:00 [ERR An error occurred using the connection to database 'Risndb' on server 'DESKTOP-US9O7T8\MSSQL14'. 
+ ]2023-03-03 18:02:16.304 +03:00 [ERR An exception occurred while iterating over the results of a query for context type 'Data.Models.RISDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20 
+ Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+]2023-03-03 18:02:16.323 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 14741.3981ms 
+ ]2023-03-03 18:02:16.324 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:02:16.327 +03:00 [ERR An unhandled exception has occurred while executing the request. 
+ Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.)
+ ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByNameAsync(String userName)
+   at Services.AuthManager.ValidateUser(LoginUserDTO userDTO) in E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\Services\AuthManager.cs:line 30
+   at Controllers.AccountsController.Login(LoginUserDTO userDTO) in E:\vs code projects\RIS React With .net API\RIS Api with React\myApi\Controllers\AccountsController.cs:line 87
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context) in C:\Users\User\Documents\Github\AspNetCoreRateLimit\src\AspNetCoreRateLimit\Middleware\RateLimitMiddleware.cs:line 124
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.HandleResponse(HttpContext httpContext)
+   at Marvin.Cache.Headers.HttpCacheHeadersMiddleware.Invoke(HttpContext httpContext, IValidatorValueInvalidator validatorValueInvalidator)
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+]2023-03-03 18:02:16.358 +03:00 [ERR Somthing went Wrong in Microsoft.AspNetCore.Diagnostics.ExceptionHandlerFeature  
+ ]2023-03-03 18:02:16.359 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 73 - 500 - application/json 14779.8521ms 
+ ]2023-03-03 18:06:01.071 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 18:06:01.071 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:06:01.073 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 1.9555ms 
+ ]2023-03-03 18:06:01.153 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 73 
+ ]2023-03-03 18:06:01.153 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:06:01.153 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:06:01.153 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:06:01.153 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:06:01.154 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:06:01.154 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:06:01.154 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:06:01.155 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:06:01.155 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:06:01.158 +03:00 [INF Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ ]2023-03-03 18:06:01.158 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 3.2616ms 
+ ]2023-03-03 18:06:01.159 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:06:01.159 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:06:01.159 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:16:01 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:06:01.159 +03:00 [INF Not generating Validation headers as the response status code does not indicate success. 
+ ]2023-03-03 18:06:01.159 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:06:01.159 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:06:01.160 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 73 - 400 - application/problem+json;+charset=utf-8 7.0536ms 
+ ]2023-03-03 18:06:27.146 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 18:06:27.147 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:06:27.148 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 1.9307ms 
+ ]2023-03-03 18:06:27.437 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 73 
+ ]2023-03-03 18:06:27.437 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:06:27.438 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:06:27.438 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:06:27.438 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:06:27.438 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:06:27.438 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:06:27.438 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:06:27.439 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:06:27.439 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:06:27.443 +03:00 [INF Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ ]2023-03-03 18:06:27.443 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 4.2517ms 
+ ]2023-03-03 18:06:27.443 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:06:27.444 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:06:27.444 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:16:27 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:06:27.444 +03:00 [INF Not generating Validation headers as the response status code does not indicate success. 
+ ]2023-03-03 18:06:27.444 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:06:27.444 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:06:27.445 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 73 - 400 - application/problem+json;+charset=utf-8 7.4770ms 
+ ]2023-03-03 18:06:36.263 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 73 
+ ]2023-03-03 18:06:36.263 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:06:36.264 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:06:36.264 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:06:36.264 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:06:36.264 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:06:36.264 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:06:36.264 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:06:36.265 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:06:36.265 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:06:36.266 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 18:06:36.278 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:06:37.790 +03:00 [INF Executed DbCommand (596ms) [Parameters=[@__normalizedUserName_0='ADMINISTRATOR@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-03-03 18:06:38.267 +03:00 [INF AuthManager attempt from administrator@example.com  
+ ]2023-03-03 18:06:39.727 +03:00 [INF Executed DbCommand (27ms) [Parameters=[@__userId_0='966f6866-aec0-41a7-8681-85cbdb299698' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0 
+ ]2023-03-03 18:06:40.425 +03:00 [INF Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+ ]2023-03-03 18:06:40.445 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 4179.6436ms 
+ ]2023-03-03 18:06:40.445 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:06:40.445 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:06:40.445 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:16:40 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:06:40.445 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 18:06:40.479 +03:00 [INF Validation headers generated. ETag: Strong, "85CB383A4AF77924B0A77423A21554C3". Last-Modified: Fri, 03 Mar 2023 15:06:40 GMT 
+ ]2023-03-03 18:06:40.479 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:06:40.479 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:06:40.480 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 73 - 202 - application/json;+charset=utf-8 4216.8721ms 
+ ]2023-03-03 18:06:52.880 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 18:06:52.881 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:06:52.881 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 0.7670ms 
+ ]2023-03-03 18:06:53.012 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 73 
+ ]2023-03-03 18:06:53.013 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:06:53.013 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:06:53.013 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:06:53.013 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:06:53.013 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:06:53.013 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:06:53.014 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:06:53.014 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:06:53.015 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:06:53.016 +03:00 [INF Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'. 
+ ]2023-03-03 18:06:53.017 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 1.763ms 
+ ]2023-03-03 18:06:53.017 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:06:53.017 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:06:53.023 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:16:53 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:06:53.023 +03:00 [INF Not generating Validation headers as the response status code does not indicate success. 
+ ]2023-03-03 18:06:53.023 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:06:53.023 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:06:53.024 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 73 - 400 - application/problem+json;+charset=utf-8 11.8626ms 
+ ]2023-03-03 18:12:44.808 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 18:12:44.808 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:12:44.809 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 1.0495ms 
+ ]2023-03-03 18:12:45.066 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 
+ ]2023-03-03 18:12:45.066 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:12:45.066 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:12:45.066 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:12:45.066 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:12:45.066 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:12:45.067 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:12:45.067 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:12:45.068 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:12:45.068 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:12:45.070 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 18:12:45.074 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:12:45.093 +03:00 [INF Executed DbCommand (16ms) [Parameters=[@__normalizedUserName_0='ADMINISTRATOR@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-03-03 18:12:45.175 +03:00 [INF AuthManager attempt from administrator@example.com  
+ ]2023-03-03 18:12:45.186 +03:00 [INF Executed DbCommand (3ms) [Parameters=[@__userId_0='966f6866-aec0-41a7-8681-85cbdb299698' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0 
+ ]2023-03-03 18:12:45.189 +03:00 [INF Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+ ]2023-03-03 18:12:45.189 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 121.1937ms 
+ ]2023-03-03 18:12:45.190 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:12:45.190 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:12:45.190 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:22:45 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:12:45.190 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 18:12:45.191 +03:00 [INF Validation headers generated. ETag: Strong, "6C6A0333C55F06E32BEB5C98793D5A6B". Last-Modified: Fri, 03 Mar 2023 15:12:45 GMT 
+ ]2023-03-03 18:12:45.191 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:12:45.192 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:12:45.192 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 - 202 - application/json;+charset=utf-8 126.7149ms 
+ ]2023-03-03 18:13:30.125 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 65 
+ ]2023-03-03 18:13:30.125 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:13:30.126 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:13:30.126 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:13:30.126 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:13:30.126 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:13:30.126 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:13:30.126 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:13:30.127 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:13:30.127 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:13:30.129 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 18:13:30.134 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:13:30.137 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='ADMINISTRATOR@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-03-03 18:13:30.214 +03:00 [INF AuthManager attempt from administrator@example.com  
+ ]2023-03-03 18:13:30.219 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__userId_0='966f6866-aec0-41a7-8681-85cbdb299698' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0 
+ ]2023-03-03 18:13:30.220 +03:00 [INF Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+ ]2023-03-03 18:13:30.220 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 92.8695ms 
+ ]2023-03-03 18:13:30.220 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:13:30.220 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:13:30.221 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:23:30 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:13:30.221 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 18:13:30.221 +03:00 [INF Validation headers generated. ETag: Strong, "EC0852F89BDFE9E79A6AA59919CF09B3". Last-Modified: Fri, 03 Mar 2023 15:13:30 GMT 
+ ]2023-03-03 18:13:30.221 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:13:30.221 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:13:30.222 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 65 - 202 - application/json;+charset=utf-8 97.1083ms 
+ ]2023-03-03 18:15:38.265 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 18:15:38.265 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:15:38.266 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 1.3712ms 
+ ]2023-03-03 18:15:38.583 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 
+ ]2023-03-03 18:15:38.584 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:15:38.584 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:15:38.584 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:15:38.584 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:15:38.584 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:15:38.584 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:15:38.584 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:15:38.585 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:15:38.586 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:15:38.589 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 18:15:38.593 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:15:38.599 +03:00 [INF Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='ADMINISTRATOR@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-03-03 18:15:38.667 +03:00 [INF AuthManager attempt from administrator@example.com  
+ ]2023-03-03 18:15:38.676 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__userId_0='966f6866-aec0-41a7-8681-85cbdb299698' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0 
+ ]2023-03-03 18:15:38.678 +03:00 [INF Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+ ]2023-03-03 18:15:38.679 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 92.7691ms 
+ ]2023-03-03 18:15:38.679 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:15:38.679 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:15:38.679 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:25:38 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:15:38.679 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 18:15:38.680 +03:00 [INF Validation headers generated. ETag: Strong, "9C96D10FFC66B7AEA18FAB4396D1A6BD". Last-Modified: Fri, 03 Mar 2023 15:15:38 GMT 
+ ]2023-03-03 18:15:38.680 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:15:38.680 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:15:38.681 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 - 202 - application/json;+charset=utf-8 97.2387ms 
+ ]2023-03-03 18:16:24.620 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 18:16:24.620 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:16:24.620 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 0.8216ms 
+ ]2023-03-03 18:16:24.916 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 
+ ]2023-03-03 18:16:24.917 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:16:24.917 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:16:24.917 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:16:24.917 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:16:24.917 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:16:24.917 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:16:24.918 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:16:24.919 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:16:24.919 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:16:24.923 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 18:16:24.927 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:16:24.937 +03:00 [INF Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='ADMINISTRATOR@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-03-03 18:16:24.979 +03:00 [INF AuthManager attempt from administrator@example.com  
+ ]2023-03-03 18:16:24.982 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__userId_0='966f6866-aec0-41a7-8681-85cbdb299698' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0 
+ ]2023-03-03 18:16:24.983 +03:00 [INF Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+ ]2023-03-03 18:16:24.984 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 64.5146ms 
+ ]2023-03-03 18:16:24.984 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:16:24.984 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:16:24.984 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:26:24 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:16:24.984 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 18:16:24.985 +03:00 [INF Validation headers generated. ETag: Strong, "2280AB182E19ADBC000DC509B6723361". Last-Modified: Fri, 03 Mar 2023 15:16:24 GMT 
+ ]2023-03-03 18:16:24.985 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:16:24.985 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:16:24.986 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 - 202 - application/json;+charset=utf-8 69.3011ms 
+ ]2023-03-03 18:17:09.112 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 18:17:09.117 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:17:09.117 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 4.8419ms 
+ ]2023-03-03 18:17:09.196 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 
+ ]2023-03-03 18:17:09.196 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:17:09.197 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:17:09.197 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:17:09.197 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:17:09.197 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:17:09.197 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:17:09.197 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:17:09.198 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:17:09.199 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:17:09.200 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 18:17:09.205 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:17:09.210 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='ADMINISTRATOR@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-03-03 18:17:09.275 +03:00 [INF AuthManager attempt from administrator@example.com  
+ ]2023-03-03 18:17:09.308 +03:00 [INF Executed DbCommand (30ms) [Parameters=[@__userId_0='966f6866-aec0-41a7-8681-85cbdb299698' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0 
+ ]2023-03-03 18:17:09.309 +03:00 [INF Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+ ]2023-03-03 18:17:09.310 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 110.6609ms 
+ ]2023-03-03 18:17:09.310 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:17:09.310 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:17:09.310 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:27:09 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:17:09.310 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 18:17:09.311 +03:00 [INF Validation headers generated. ETag: Strong, "DEA3EB804BC486CD0C431FB0AD6070CF". Last-Modified: Fri, 03 Mar 2023 15:17:09 GMT 
+ ]2023-03-03 18:17:09.311 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:17:09.311 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:17:09.312 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 - 202 - application/json;+charset=utf-8 115.6270ms 
+ ]2023-03-03 18:20:15.990 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 18:20:15.990 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:20:15.990 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 0.8570ms 
+ ]2023-03-03 18:20:16.123 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 
+ ]2023-03-03 18:20:16.124 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:20:16.124 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:20:16.124 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:20:16.124 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:20:16.124 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:20:16.124 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:20:16.124 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:20:16.125 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:20:16.125 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:20:16.128 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 18:20:16.132 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:20:16.139 +03:00 [INF Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='ADMINISTRATOR@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-03-03 18:20:16.204 +03:00 [INF AuthManager attempt from administrator@example.com  
+ ]2023-03-03 18:20:16.208 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__userId_0='966f6866-aec0-41a7-8681-85cbdb299698' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0 
+ ]2023-03-03 18:20:16.209 +03:00 [INF Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+ ]2023-03-03 18:20:16.209 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 83.9392ms 
+ ]2023-03-03 18:20:16.210 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:20:16.210 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:20:16.210 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:30:16 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:20:16.210 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 18:20:16.210 +03:00 [INF Validation headers generated. ETag: Strong, "2D8A3722509AAF8F7402A1265522648C". Last-Modified: Fri, 03 Mar 2023 15:20:16 GMT 
+ ]2023-03-03 18:20:16.210 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:20:16.210 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:20:16.211 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 - 202 - application/json;+charset=utf-8 87.7623ms 
+ ]2023-03-03 18:22:50.788 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 18:22:50.788 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:22:50.789 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 1.0783ms 
+ ]2023-03-03 18:22:50.872 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 
+ ]2023-03-03 18:22:50.872 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:22:50.874 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:22:50.875 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:22:50.875 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:22:50.875 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:22:50.883 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:22:50.883 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:22:50.885 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:22:50.886 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:22:50.888 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 18:22:50.895 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:22:50.904 +03:00 [INF Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='ADMINISTRATOR@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-03-03 18:22:50.974 +03:00 [INF AuthManager attempt from administrator@example.com  
+ ]2023-03-03 18:22:50.978 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__userId_0='966f6866-aec0-41a7-8681-85cbdb299698' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0 
+ ]2023-03-03 18:22:50.979 +03:00 [INF Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+ ]2023-03-03 18:22:50.980 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 93.2485ms 
+ ]2023-03-03 18:22:50.980 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:22:50.980 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:22:50.980 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:32:50 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:22:50.981 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 18:22:50.981 +03:00 [INF Validation headers generated. ETag: Strong, "F9B2A2C3B09B1CE9BDD149D5FDC36764". Last-Modified: Fri, 03 Mar 2023 15:22:50 GMT 
+ ]2023-03-03 18:22:50.981 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:22:50.981 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:22:50.982 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 - 202 - application/json;+charset=utf-8 111.1699ms 
+ ]2023-03-03 18:24:55.648 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 18:24:55.649 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:24:55.651 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 2.5279ms 
+ ]2023-03-03 18:24:55.738 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 
+ ]2023-03-03 18:24:55.739 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:24:55.740 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:24:55.740 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:24:55.740 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:24:55.740 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:24:55.740 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:24:55.741 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:24:55.744 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:24:55.747 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:24:55.751 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 18:24:55.759 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:24:55.768 +03:00 [INF Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='ADMINISTRATOR@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-03-03 18:24:55.838 +03:00 [INF AuthManager attempt from administrator@example.com  
+ ]2023-03-03 18:24:55.844 +03:00 [INF Executed DbCommand (3ms) [Parameters=[@__userId_0='966f6866-aec0-41a7-8681-85cbdb299698' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0 
+ ]2023-03-03 18:24:55.847 +03:00 [INF Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+ ]2023-03-03 18:24:55.848 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 100.9236ms 
+ ]2023-03-03 18:24:55.848 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:24:55.848 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:24:55.849 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:34:55 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:24:55.849 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 18:24:55.850 +03:00 [INF Validation headers generated. ETag: Strong, "C193AB78CF7399B3D33D1A7ECB8D8BD5". Last-Modified: Fri, 03 Mar 2023 15:24:55 GMT 
+ ]2023-03-03 18:24:55.850 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:24:55.850 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:24:55.851 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 - 202 - application/json;+charset=utf-8 113.0410ms 
+ ]2023-03-03 18:25:28.700 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 18:25:28.700 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:25:28.701 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 0.9521ms 
+ ]2023-03-03 18:25:28.723 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 
+ ]2023-03-03 18:25:28.724 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:25:28.724 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:25:28.724 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:25:28.724 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:25:28.724 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:25:28.724 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:25:28.724 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:25:28.725 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:25:28.725 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:25:28.726 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 18:25:28.729 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:25:28.733 +03:00 [INF Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='ADMINISTRATOR@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-03-03 18:25:28.786 +03:00 [INF AuthManager attempt from administrator@example.com  
+ ]2023-03-03 18:25:28.789 +03:00 [INF Executed DbCommand (1ms) [Parameters=[@__userId_0='966f6866-aec0-41a7-8681-85cbdb299698' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0 
+ ]2023-03-03 18:25:28.790 +03:00 [INF Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+ ]2023-03-03 18:25:28.790 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 64.8267ms 
+ ]2023-03-03 18:25:28.790 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:25:28.790 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:25:28.790 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:35:28 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:25:28.790 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 18:25:28.791 +03:00 [INF Validation headers generated. ETag: Strong, "F4E834A93CC7FA70FCBF16CC9143F8E9". Last-Modified: Fri, 03 Mar 2023 15:25:28 GMT 
+ ]2023-03-03 18:25:28.791 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:25:28.791 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:25:28.792 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 - 202 - application/json;+charset=utf-8 68.0359ms 
+ ]2023-03-03 18:26:16.591 +03:00 [INF Request starting HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - 
+ ]2023-03-03 18:26:16.592 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:26:16.593 +03:00 [INF Request finished HTTP/2 OPTIONS https://localhost:7025/Api/Accounts/Login - - - 204 - - 1.4596ms 
+ ]2023-03-03 18:26:16.605 +03:00 [INF Request starting HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 
+ ]2023-03-03 18:26:16.605 +03:00 [INF CORS policy execution successful. 
+ ]2023-03-03 18:26:16.605 +03:00 [INF Checking for conditional GET/HEAD. 
+ ]2023-03-03 18:26:16.605 +03:00 [INF Not valid - method isn't GET or HEAD. 
+ ]2023-03-03 18:26:16.605 +03:00 [INF Don't generate 304 - Not Modified.  Continue. 
+ ]2023-03-03 18:26:16.605 +03:00 [INF Checking for conditional PUT/PATCH. 
+ ]2023-03-03 18:26:16.606 +03:00 [INF Not valid - method isn't PUT or PATCH. 
+ ]2023-03-03 18:26:16.606 +03:00 [INF Don't generate 412 - Precondition Failed.  Continue. 
+ ]2023-03-03 18:26:16.606 +03:00 [INF Executing endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:26:16.607 +03:00 [INF Route matched with {action = "Login", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Data.DTOs.LoginUserDTO) on controller Controllers.AccountsController (myApi). 
+ ]2023-03-03 18:26:16.608 +03:00 [INF Login attempt from administrator@example.com  
+ ]2023-03-03 18:26:16.615 +03:00 [INF Entity Framework Core 6.0.7 initialized 'RISDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: SensitiveDataLoggingEnabled  
+ ]2023-03-03 18:26:16.622 +03:00 [INF Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='ADMINISTRATOR@EXAMPLE.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0 
+ ]2023-03-03 18:26:16.689 +03:00 [INF AuthManager attempt from administrator@example.com  
+ ]2023-03-03 18:26:16.698 +03:00 [INF Executed DbCommand (6ms) [Parameters=[@__userId_0='966f6866-aec0-41a7-8681-85cbdb299698' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0 
+ ]2023-03-03 18:26:16.699 +03:00 [INF Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+ ]2023-03-03 18:26:16.700 +03:00 [INF Executed action Controllers.AccountsController.Login (myApi) in 93.0354ms 
+ ]2023-03-03 18:26:16.700 +03:00 [INF Executed endpoint 'Controllers.AccountsController.Login (myApi)' 
+ ]2023-03-03 18:26:16.700 +03:00 [INF Generating expiration headers. 
+ ]2023-03-03 18:26:16.702 +03:00 [INF Expiration headers generated. Expires: Fri, 03 Mar 2023 15:36:16 GMT. Cache-Control: private,max-age=600,must-revalidate. 
+ ]2023-03-03 18:26:16.702 +03:00 [INF Generating Validation headers. 
+ ]2023-03-03 18:26:16.703 +03:00 [INF Validation headers generated. ETag: Strong, "A4E9C991BBA6F11B856F03B7ECC5E144". Last-Modified: Fri, 03 Mar 2023 15:26:16 GMT 
+ ]2023-03-03 18:26:16.703 +03:00 [INF Generating Vary header. 
+ ]2023-03-03 18:26:16.703 +03:00 [INF Vary header generated: Accept, Accept-Language, Accept-Encoding. 
+ ]2023-03-03 18:26:16.704 +03:00 [INF Request finished HTTP/2 POST https://localhost:7025/Api/Accounts/Login application/json 64 - 202 - application/json;+charset=utf-8 99.5211ms 
+ ]

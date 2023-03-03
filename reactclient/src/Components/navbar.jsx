@@ -10,8 +10,8 @@ const NavBar = () => {
         </a>
         <div className="collapse navbar-collapse">
           <div className="navbar navbar-nav">
-            <NavLink className="nav-item nav-link" to="/movies">
-              Movies
+            <NavLink className="nav-item nav-link" to="/patients">
+              patients
             </NavLink>
             <NavLink className="nav-item nav-link" to="/form">
               form1

@@ -4,7 +4,14 @@ import Patients from "./Components/Patients";
 import Navbar from "./Components/navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Components/login";
-export default function App() {
+import useToken from "./useToken";
+const App = () => {
+  const { token, setToken } = useToken();
+  if (!token) {
+    {
+      return <Login setToken={setToken} />;
+    }
+  }
   return (
     <React.Fragment>
       <Navbar></Navbar>
@@ -15,4 +22,5 @@ export default function App() {
       </Routes>
     </React.Fragment>
   );
-}
+};
+export default App;

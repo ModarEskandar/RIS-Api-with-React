@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\vs code projects\\RIS Api with React\\myApi\\myApi.csproj": {}
+    "E:\\vs code projects\\RIS React With .net API\\RIS Api with React\\myApi\\myApi.csproj": {}
   },
   "projects": {
-    "E:\\vs code projects\\RIS Api with React\\myApi\\myApi.csproj": {
+    "E:\\vs code projects\\RIS React With .net API\\RIS Api with React\\myApi\\myApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\vs code projects\\RIS Api with React\\myApi\\myApi.csproj",
+        "projectUniqueName": "E:\\vs code projects\\RIS React With .net API\\RIS Api with React\\myApi\\myApi.csproj",
         "projectName": "myApi",
-        "projectPath": "E:\\vs code projects\\RIS Api with React\\myApi\\myApi.csproj",
+        "projectPath": "E:\\vs code projects\\RIS React With .net API\\RIS Api with React\\myApi\\myApi.csproj",
         "packagesPath": "C:\\Users\\EME\\.nuget\\packages\\",
-        "outputPath": "E:\\vs code projects\\RIS Api with React\\myApi\\obj\\",
+        "outputPath": "E:\\vs code projects\\RIS React With .net API\\RIS Api with React\\myApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\EME\\AppData\\Roaming\\NuGet\\NuGet.Config",
