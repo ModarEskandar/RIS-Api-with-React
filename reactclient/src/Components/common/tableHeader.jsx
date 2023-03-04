@@ -1,15 +1,18 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 
 // columns: array
 // onSort: func
 // sortColumn
 const TableHeader = (props) => {
+  const [sortColumn, setSortColumn] = useState(props.sortColumn);
   const raiseSort = (targetProp) => {
-    let sortColumn = props.sortColumn;
     if (sortColumn.targetProp === targetProp && targetProp)
-      sortColumn.order = sortColumn.order === "asc" ? "desc" : "asc";
+      setSortColumn({
+        targetProp,
+        order: sortColumn.order === "asc" ? "desc" : "asc",
+      });
     else if (sortColumn.targetProp !== targetProp && targetProp)
-      sortColumn = { targetProp, order: "asc" };
+      setSortColumn({ targetProp, order: "asc" });
     props.onSort(sortColumn);
   };
 
@@ -20,7 +23,6 @@ const TableHeader = (props) => {
           <th
             key={column.label || column.key}
             onClick={() => raiseSort(column.targetProp)}
-            sortColumn={props.sortColumn}
             style={{ cursor: "pointer" }}
           >
             {column.label}

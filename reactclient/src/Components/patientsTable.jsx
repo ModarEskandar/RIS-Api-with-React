@@ -19,13 +19,15 @@ const PatientsTable = (props) => {
     { label: "Insertion date", targetProp: "insertdate" },
     { label: "NID", targetProp: "nationalidnumber" },
     {
-      key: "Like",
+      key: "Update",
       content: (patient) => (
-        <Like liked={patient.liked} onLikeClick={() => onLike(patient)}></Like>
+        <button className="btn btn-primary" onClick={() => onUpdate(patient)}>
+          Update
+        </button>
       ),
     },
     {
-      key: "Control",
+      key: "Delete",
       content: (patient) => (
         <button className="btn btn-danger" onClick={() => onDelete(patient)}>
           Delete
@@ -33,7 +35,7 @@ const PatientsTable = (props) => {
       ),
     },
   ];
-  const { patients, onLike, onDelete, sortColumn, onSort } = props;
+  const { patients, onUpdate, onDelete, sortColumn, onSort } = props;
 
   return (
     <table className="table">

@@ -1,7 +1,7 @@
-const API_URL_DEV = "https://localhost:7025";
+const API_URL_DEV = "https://localhost:7025/api";
 const API_URL_PRODUCTION = "https://appname.azurewebsites.net";
 
-const GET_ALL_PATIENTS = "get-all-patients";
+const GET_ALL_PATIENTS = "Patients";
 const GET_PATIENT_BY_ID = "get-patient-by-id";
 const CREATE_PATIENT = "create-patient";
 const UPDATE_PATIENT = "update-patient";
